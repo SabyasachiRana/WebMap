@@ -292,11 +292,3 @@ in case you can't do it, take care to filter who and what can access to WebMap w
 Exposing this app to the whole internet could lead not only to a stored XSS but also to a leakage of sensitive/critical/private 
 informations about your port scan. Please, be smart.
 
-## Contributors
-This project is currently a beta, and I'm not super skilled on Django so, every type of contribution is appreciated. 
-I'll mention all contributors on the [CONTRIBUTORS](CONTRIBUTORS.md) file.
-
-## Contacts
-In order to receive updates about this project, please follow me on twitter:<br>
-Twitter: [@Menin_TheMiddle](https://twitter.com/Menin_TheMiddle)<br>
-YouTube: [Rev3rseSecurity](https://www.youtube.com/rev3rsesecurity)
