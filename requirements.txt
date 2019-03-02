@@ -1,0 +1,3 @@
+requests
+xmltodict
+python-nmap
