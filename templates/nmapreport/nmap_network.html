@@ -1,0 +1,92 @@
+{% extends "nmapreport/main.html" %}
+
+{% block content %}
+	<style type="text/css">
+		#mynetwork {
+			width: 99%;
+			height: 600px;
+		}
+	</style>
+	<div class="" style="margin-top:10px;">
+		<div id="mynetwork"></div>
+	</div>
+
+	<script>
+	var nodes, edges, network;
+	var icons = {};
+
+	function addNode(id, label, fontcode, color, fontcolor) {
+		try {
+			nodes.add({
+				id: id,
+				mass: 6,
+				label: label.replace(/\%20/g, " "),
+				value: 20,
+				physics: true,
+				shape: 'icon',
+				icon: {
+					face: '"Font Awesome 5 Free"',
+					code: fontcode,
+					size: 58,
+					color: color,
+				},
+				font: {
+					face: 'monospace',
+					color: fontcolor,
+					size: 28,
+				},
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
+	function draw() {
+		nodes = new vis.DataSet();
+		edges = new vis.DataSet();
+
+		var container = document.getElementById('mynetwork');
+		var data = {
+			nodes: nodes,
+			edges: edges
+		};
+		var options = {
+			nodes: {
+				shape: 'icon',
+				icon: {
+					face: '"Font Awesome 5 Free"',
+					code: '\uf15b',
+				},
+			},
+			"physics": {
+				"timestep": 0.8,
+				"solver": "barnesHut",
+				"maxVelocity": 20,
+				"minVelocity": 4,
+				"barnesHut": {
+					"centralGravity": 1.2,
+					// "springLength": 400,
+					"avoidOverlap": 1.0,
+				},
+				"repulsion": {
+					"centralGravity": 0
+				},
+				"stabilization": {
+					"fit": true
+				}
+			},
+		};
+
+		network = new vis.Network(container, data, options);
+	}
+
+
+	$(document).ready(function() {
+		draw();
+
+	});
+	</script>
+
+	{{ js|safe }}
+
+{% endblock %}

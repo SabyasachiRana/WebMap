@@ -1,0 +1,53 @@
+
+body {
+	// font-weight:300;
+}
+
+b {
+	font-weight:600;
+}
+
+h1 {
+	font-weight:700;
+}
+
+.subtitle {
+	margin-top:-20px;
+	color:#999;
+	font-size:24px;
+}
+
+.small {
+	font-size:12px;
+	color:#666;
+}
+
+.margintb {
+	margin-top:60px;
+	margin-bottom:60px;
+}
+
+.bleft {
+	border-left:solid #999 1px;
+}
+
+.extrainfo {
+	border-top: solid #ccc 1px;
+	padding:10px;
+	margin-bottom:10px;
+	font-family:monospace;
+	border-radius:4px;
+	background-color:#eee;
+}
+
+.extratitle {
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+.label {
+	padding:6px;
+	border-radius:4px;
+	font-size:12px;
+	color:#fff;
+}

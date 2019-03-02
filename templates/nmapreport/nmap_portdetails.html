@@ -1,0 +1,94 @@
+{% extends "nmapreport/main.html" %}
+
+{% block content %}
+	<div class="container" style="margin-top:30px;">
+
+		<div class="card wmcard">
+			<div class="card-content">
+				<div id="hostlabel" style="z-index:99;transform: rotate(-8deg);margin-top:-14px;margin-left:-40px;" class="leftlabel {{ labelcolor }}">{{ label }}</div>
+				<div id="hostlabelbb" class="{{ labelcolor }}" style="border-radius:0px 4px 0px 4px;z-index:98;position:absolute;width:18px;height:10px;margin-left:-43px;margin-top:-3px;"></div>
+				<div class="row">
+					<div class="col s3">
+						<span class="card-title">{{ address }}</span>
+						<h6>{{ hostname|safe }}</h6><span class="small">{{ scanfile }}</span>
+						<br><a class="small" href="/">Back to hosts</a>
+					</div>
+					<div class="col s3 hide-on-med-and-down" id="detailspo"></div>
+					<div class="col s3 hide-on-med-and-down" id="detailspc"></div>
+					<div class="col s3 hide-on-med-and-down" id="detailspf"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card wmcard">
+			<div class="card-content">
+				<table>
+					<thead>
+						<tr><th style="max-width:50px;">Port</th><th class="hide-on-med-and-down" style="width:300px;">Product / Version</th><th class="hide-on-med-and-down">Extra Info</th><th>&nbsp;</th></tr>
+					</thead>
+					<tbody>
+
+						{% for i,v in tr.items %}
+							<tr>
+								<td style="width:200px;">
+									{% if v.state == 'filtered' %}
+										<i class="fas fa-filter grey-text"></i>
+									{% elif v.state == 'closed' %}
+										<i class="fas fa-door-closed red-text"></i>
+									{% elif v.state == 'open' %}
+										<i class="fas fa-door-open green-text"></i>
+									{% endif %}
+									<span class="title-small grey-text">{{ v.protocol }} / </span><b class="blue-text text-darken-3">{{ v.portid }}</b><br>
+									<div class="small" style="margin-top:10px;">
+										<b class="grey-text">Service:</b> {{ v.service }}<br>
+										<b class="grey-text">State:</b> {{ v.state }}<br>
+										<b class="grey-text">Reason:</b> {{ v.reason }}
+									</div>
+								</td>
+								<td class="hide-on-med-and-down" style="vertical-align:top;">
+									{{ v.product|safe }}<br>
+									{{ v.version|safe }}
+								</td>
+								<td class="hide-on-med-and-down" style="vertical-align:top;">
+									{{ v.extrainfo|safe }}
+									{{ v.cpe|safe }}
+								</td>
+								<td>
+									<ul id="dropdown{{ v.pel }}" class="dropdown-content" style="min-width:300px;">
+										<li><a href="#!" onclick="javascript:apiPortDetails('{{ address }}','{{ v.portid }}');">Show details</a></li>
+										<li class="divider" tabindex="-1"></li>
+										<li><a href="#!" class="btncpy" data-clipboard-text="curl -v -A 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1' -k 'http://{{ address }}:{{ v.portid }}'">Copy as curl command</a></li>
+										<li><a href="#!" class="btncpy" data-clipboard-text="nikto -host 'http://{{ address }}:{{ v.portid }}'">Copy as nikto command</a></li>
+										<li><a href="#!" class="btncpy" data-clipboard-text="telnet {{ address }} {{ v.portid }}">Copy as telnet command</a></li>
+									</ul><a class="dropdown-trigger btn blue right" href="#!" data-target="dropdown{{ v.pel }}"><i class="material-icons">arrow_drop_down</i></a>
+								</td>
+							</tr>
+						{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		{% if notes %}
+		<div class="card wmcard">
+			<div class="card-content">
+				<span class="card-title">Notes:</span>
+				{{ notes|safe }}
+			</div>
+		</div>
+		{% endif %}
+
+		{% if cvelist %}
+		<div class="card wmcard">
+			<div class="card-content">
+				<span class="card-title">CVE List:</span>
+				{{ cvelist|safe }}
+			</div>
+		</div>
+		{% endif %}
+
+	</div>
+
+	{{ js|safe }}
+{% endblock %}

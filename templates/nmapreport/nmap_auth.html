@@ -1,0 +1,39 @@
+{% extends "nmapreport/main.html" %}
+
+{% block content %}
+	<div class="container" style="margin-top:100px;">
+		<div class="row">
+			<div class="col s12 m4 offset-m4">
+				<div class="card wmcard">
+					<div class="card-content">
+						<span class="card-title">Token</span>
+						<input type="password" id="token" /><br><br>
+						<span style="font-size:12px;">Generate a new token with:<br><code>docker exec -ti webmap /root/token</code></span><br><br>
+						<button class="btn blue" onclick="javascript:checkToken();">Login</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if out %}
+		{{ out|safe }}
+	{% endif %}
+
+	<script>
+		function checkToken() {
+			var token = $('#token').val();
+			csrftoken = $('input[name="csrfmiddlewaretoken"]').val();
+			$.post('/view/login/', {
+				'csrfmiddlewaretoken': csrftoken,
+				'token': token,
+			}).done(function(d) {
+				if(d['auth'] == 'ok') {
+					location.href='/';
+				} else {
+					swal("Error", "Invalid token", "error")
+				}
+			});
+		}
+	</script>
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "nmapreport/main.html" %}
+
+{% block content %}
+	<div class="container" style="margin-top:30px;">
+
+		<div class="card wmcard">
+			<div class="card-content">
+				<div class="row hide-on-med-and-down">
+					<div class="col s12 m4 title-small grey-text">Scan Information</div>
+					<div class="col s12 m4 title-small grey-text">Ports Status</div>
+					<div class="col s12 m4 title-small grey-text">Top Ports / Services</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4 small">
+						<b class="orange-text">Start Time:</b> {{ stats.startstr }}<br>
+						<b class="orange-text">Scan Type:</b> {{ stats.scantype }}<br>
+						<b class="orange-text">Scan Protocol:</b> {{ stats.protocol }}<br>
+						<b class="orange-text">Nmap Command:</b> <a class="activator" href="#!">details</a><br>
+					</div>
+					<div class="col s12 m4 hide-on-med-and-down" style="border-left:solid #666 1px;">{{ stats.scaninfobox2|safe }}</div>
+					<div class="col s12 m4 hide-on-med-and-down" style="border-left:solid #666 1px;">{{ stats.scaninfobox3|safe }}</div>
+				</div>
+
+			</div>
+			<div class="card-reveal grey darken-3">
+				<span class="card-title grey-text">Scan Details<i class="material-icons right">close</i></span>
+				<div class="code" style="word-wrap: break-word;overflow-wrap: break-word;">
+					<p style="font-family:monospace">{{ stats.nmapargs }}</p>
+					<p class="small">
+						Nmap version: {{ stats.nmapver }}<br>
+						XML version: {{ stats.xmlver }}
+					</p>
+				</div>
+			</div>
+			
+			{% if stats.popen == 0 and stats.pclosed == 0 and stats.pfiltered == 0 %}
+			{% else %}
+			<div class="card-action">
+				<a href="#!" onclick="javascript:genPDF('{{ scanmd5 }}');"><i class="fas fa-file-pdf"></i> PDF Report</a>
+				<a href="#!" onclick="javascript:checkCVE();"><i class="fas fa-bug"></i> Check for CVE and Exploits</a>
+				<a href="/report/view/network"><i class="fas fa-project-diagram"></i> Network View</a>
+			</div>
+			{% endif %}
+		</div>
+
+		<div class="row" style="{{ pretablestyle }}">
+			<div class="col s12 m3" style="padding:1px;"><div class="card wmcard" style="text-align:center;padding:6px;"><h4><i class="fab fa-creative-commons-sampling"></i> <span class="blue-text">{{ stats.hostsup }}</span></h4><span class="small grey-text">HOSTS UP</span></div></div>
+			<div class="col s12 m3" style="padding:1px;"><div class="card wmcard" style="text-align:center;padding:6px;"><h4><i class="fas fa-door-open green-text"></i> <span class="green-text">{{ stats.popen }}</span></h4><span class="small grey-text">OPEN PORTS</span></div></div>
+			<div class="col s12 m3" style="padding:1px;"><div class="card wmcard" style="text-align:center;padding:6px;"><h4><i class="fas fa-door-closed red-text"></i> <span class="red-text">{{ stats.pclosed }}</span></h4><span class="small grey-text">CLOSED PORTS</span></div></div>
+			<div class="col s12 m3" style="padding:1px;"><div class="card wmcard" style="text-align:center;padding:6px;"><h4><i class="fas fa-filter orange-text"></i> <span class="orange-text">{{ stats.pfiltered }}</span></h4><span class="small grey-text">FILTERED PORTS</span></div></div>
+		</div>
+
+		{% if stats.popen == 0 and stats.pclosed == 0 and stats.pfiltered == 0 %}
+		{% else %}
+		<div class="card wmcard hide-on-med-and-down" style="{{ pretablestyle }}">
+			<div class="card-content">
+				<div class="row">
+					<div class="col s4 title-small grey-text">Services:</div><div class="col s8 title-small grey-text">Services:</div>
+					<div class="col s4" style="border-right:solid #555 1px;margin-top:10px;min-height:410px;">
+						<span style="font-family:monospace;font-size:12px;">{{ stats.services|safe }}</span><br><br>
+						<span class="title-small grey-text">Top 10 Ports:</span><br><span style="font-family:monospace;font-size:12px;">{{ stats.portids|safe }}</span><br><br>
+						<span class="title-small grey-text">OS Type List:</span><br><span style="font-family:monospace;font-size:12px;">{{ stats.ostypes|safe }}</span><br><br>
+					</div>
+					<div class="col s8" style="margin-top:10px;"><canvas id="chart2" height="200"></canvas></div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		{% if stats.popen == 0 and stats.pclosed == 0 and stats.pfiltered == 0 %}
+		{% else %}
+			{{ js|safe }}
+		{% endif %}
+
+		{% for i,v in tr.items %}
+			<div class="card wmcard">
+
+
+				<div class="card-content">
+					<div class="row" style="padding:0px;margin-bottom:0px;">
+						<div class="col s4" style="border-right:solid #444 1px;">
+							<div class="hindex wmcard">{{ v.hostindex }}</div>
+							{{ v.newlabelout|safe }}
+
+							{% if v.po != 0 or v.pc != 0 or v.pf != 0 %}
+								<h5><a href="/report/{{ i }}" class="blue-text text-darken-3">{{ i }}</a></h5>{{ v.hostname|safe }}
+							{% else %}
+								<h5>{{ i }}</h5>{{ v.hostname|safe }}
+							{% endif %}
+
+							<i class="fas fa-door-open green-text"></i> <span class="green-text">{{ v.po }}</span>
+							<i class="fas fa-door-closed red-text"></i> <span class="red-text">{{ v.pc }}</span>
+							<i class="fas fa-filter orange-text"></i> <span class="orange-text">{{ v.pf }}</span>
+
+						</div>
+						<div class="col s4 small grey-text">
+							<b>OPEN PORTS %</b>
+							{{ v.portstate|safe }}
+
+							{% if v.tags|length > 0 %}
+								<br><b>GUESSED TAGS</b><br>
+								{% for i in v.tags %}
+									<span class="blue white-text" style="border-radius:4px;padding:4px;font-size:10px;">#{{ i }}</span>
+								{% endfor %}
+							{% endif %}
+						</div>
+						<div class="col s2 small">
+							<b>SERVICES</b><br>
+							{{ v.services|safe }}
+						</div>
+						<div class="col s2 small">
+							<b>PORTS</b><br>
+							{{ v.ports|safe }}
+						</div>
+					</div>
+				</div>
+
+				<div class="card-action">
+					<ul id="hostdd{{ v.hostindex }}" class="dropdown-content" style="min-width:200px;">
+						<li><a href="#!" onclick="javascript:setLabel('host', 'Vulnerable', '{{ v.addressmd5 }}', {{ v.hostindex }});"><span class="tmlabel red">Vulnerable</span></a></li>
+						<li><a href="#!" onclick="javascript:setLabel('host', 'Critical', '{{ v.addressmd5 }}', {{ v.hostindex }});"><span class="tmlabel black">Critical</span></a></li>
+						<li><a href="#!" onclick="javascript:setLabel('host', 'Warning', '{{ v.addressmd5 }}', {{ v.hostindex }});"><span class="tmlabel orange"><span class="tmlabel orange">Warning</span></a></li>
+						<li><a href="#!" onclick="javascript:setLabel('host', 'Checked', '{{ v.addressmd5 }}', {{ v.hostindex }});"><span class="tmlabel blue"><span class="tmlabel blue">Checked</span></a></li>
+						<li><a class="grey-text" href="#!" onclick="javascript:removeLabel('host', '{{ v.addressmd5 }}', {{ v.hostindex }});">Remove label</a></li>
+						<li class="divider"></li>
+						<li><a class="grey-text" href="#!" onclick="javascript:openNotes('{{ v.addressmd5 }}', '{{ v.notesb64 }}');">Insert notes</a></li>
+						{{ v.removenotes|safe }}
+					</ul>
+					<a href="#!" class="grey-text dropdown-trigger" data-target="hostdd{{ v.hostindex }}"><i class="fas fa-ellipsis-v"></i> Actions</a>
+
+					{{ v.notesout|safe }}
+
+					{{ v.cveout|safe }}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+
+
+<div id="activescancard" class="small grey-text" style="bottom:0px;left:0px;width:100%;position:fixed;background-color:rgba(0,0,0,0.8);padding:10px;z-index:999;display:none;">
+	<b>Active Scan:</b>
+	<div id="activescan">asd</div>
+</div>
+
+	
+{% endblock %}

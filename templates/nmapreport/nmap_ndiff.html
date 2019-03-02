@@ -1,0 +1,35 @@
+{% extends "nmapreport/main.html" %}
+
+{% block content %}
+	this section is under development
+	<div class="container" id="ndiff">
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title">Hosts</span>
+				<div class="row" id="ndiffhosts">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+
+		var f1 = '{{ f1 }}';
+		var f2 = '{{ f2 }}';
+
+		if(f1 != '' && f2 != '') {
+			$.get('/api/v1/nmap/ndiff/'+f1+'/'+f2).done(function(d) {
+				console.log(d);
+				for(i in d['hosts']) {
+					$('#ndiffhosts').append('<div></div><div class="col s6">'+i+'</div>');
+				}
+			});
+		}
+
+	});
+	</script>
+
+	{{ js|safe }}
+
+{% endblock %}
