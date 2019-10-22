@@ -1,8 +1,7 @@
 # WebMap
 # -
 # https://github.com/SabyasachiRanay/WebMap
-# Rev3rse Security: https://www.youtube.com/rev3rsesecurity
-# Author: theMiddle
+# Author: SabyasachiRana
 # -
 # Usage:
 #   $ cd /opt
