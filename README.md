@@ -68,7 +68,7 @@ $ curl -sL http://bit.ly/webmapsetup | bash
 
 ### Run without Docker
 This project is designed to run on a Docker container. IMHO it isn't a good idea to run this on a custom Django installation, 
-but if you need it you can find all building steps inside the [Dockerfile](https://github.com/SabyasachiRana/WebMap/blob/v2.1/master/docker/Dockerfile).
+but if you need it you can find all building steps inside the [Dockerfile](https://github.com/SabyasachiRana/WebMap/blob/master/docker/Dockerfile).
 
 ## Video
 The HTML template changes often. This video could not be up to date with the latest version.
