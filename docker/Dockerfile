@@ -1,6 +1,6 @@
 # WebMap
 # -
-# https://github.com/SabyasachiRanay/WebMap
+# https://github.com/SabyasachiRana/WebMap
 # Author: SabyasachiRana
 # -
 # Usage:
