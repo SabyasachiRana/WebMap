@@ -26,6 +26,8 @@ A Web Dashbord for Nmap XML Report
 
 ## Usage
 You should use this with docker, just by sending this command:
+
+## ===================================FIX==================================
 ```bash
 $ mkdir /tmp/webmap
 $ docker run -d \
@@ -33,7 +35,7 @@ $ docker run -d \
          -h webmap \
          -p 8000:8000 \
          -v /tmp/webmap:/opt/xml \
-         rev3rse/webmap
+         secureforest/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
 $ nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml 192.168.1.0/24
@@ -46,9 +48,11 @@ In order to access to the WebMap dashboard, you need a token. You can create a n
 $ docker exec -ti webmap /root/token
 ```
 
+## ===================================FIX==================================
+
 ### Quick and Dirty
 ```bash
-$ curl -sL http://bit.ly/webmapsetup | bash
+$ curl -sL http://bit.ly/wmsetup | bash
 ```
 
 ### Upgrade from previous release
@@ -60,10 +64,10 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull rev3rse/webmap
+$ docker pull secureforest/webmap
 
 $ # run WebMap
-$ curl -sL http://bit.ly/webmapsetup | bash
+$ curl -sL http://bit.ly/wmsetup | bash
 ```
 
 ### Run without Docker
