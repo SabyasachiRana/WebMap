@@ -33,7 +33,7 @@ $ docker run -d \
          -h webmap \
          -p 8000:8000 \
          -v /tmp/webmap:/opt/xml \
-         sabyasachirana/webmap
+         reborntc/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
 $ nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml 192.168.1.0/24
@@ -60,7 +60,7 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull sabyasachirana/webmap
+$ docker pull reborntc/webmap
 
 $ # run WebMap
 $ curl -sL http://bit.ly/webmapsetup | bash
