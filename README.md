@@ -33,7 +33,7 @@ $ docker run -d \
          -h webmap \
          -p 8000:8000 \
          -v /tmp/webmap:/opt/xml \
-         rev3rse/webmap
+         sabyasachirana/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
 $ nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml 192.168.1.0/24
@@ -60,7 +60,7 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull rev3rse/webmap
+$ docker pull sabyasachirana/webmap
 
 $ # run WebMap
 $ curl -sL http://bit.ly/webmapsetup | bash
