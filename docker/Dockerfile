@@ -34,7 +34,6 @@ RUN pip3 install Django requests xmltodict && \
 
 COPY settings.py /opt/nmapdashboard/nmapdashboard/
 COPY urls.py /opt/nmapdashboard/nmapdashboard/
-COPY vimrc /root/.vimrc
 COPY tzdata.sh /root/tzdata.sh
 COPY startup.sh /startup.sh
 
