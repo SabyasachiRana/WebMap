@@ -46,11 +46,6 @@ In order to access to the WebMap dashboard, you need a token. You can create a n
 $ docker exec -ti webmap /root/token
 ```
 
-### Quick and Dirty
-```bash
-$ curl -sL http://bit.ly/webmapsetup | bash
-```
-
 ### Upgrade from previous release
 ```bash
 $ # stop running webmap container
