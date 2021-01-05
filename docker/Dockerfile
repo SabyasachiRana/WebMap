@@ -32,10 +32,10 @@ RUN pip3 install Django requests xmltodict && \
     git clone https://github.com/SabyasachiRana/WebMap.git nmapreport && \
     cd nmapreport && git checkout master
 
-COPY settings.py /opt/nmapdashboard/nmapdashboard/
-COPY urls.py /opt/nmapdashboard/nmapdashboard/
-COPY tzdata.sh /root/tzdata.sh
-COPY startup.sh /startup.sh
+RUN cp /opt/nmapdashboard/nmapreport/docker/settings.py /opt/nmapdashboard/nmapdashboard/
+RUN cp /opt/nmapdashboard/nmapreport/docker/urls.py /opt/nmapdashboard/nmapdashboard/
+RUN cp /opt/nmapdashboard/nmapreport/docker/tzdata.sh /root/tzdata.sh
+RUN cp /opt/nmapdashboard/nmapreport/docker/startup.sh /startup.sh
 
 RUN cd /opt/nmapdashboard && python3 manage.py migrate
 RUN apt-get autoremove -y
