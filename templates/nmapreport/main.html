@@ -17,8 +17,8 @@
 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-	<script src="{% static "/async.js" %}"></script>
-	<style>
+	<script src="{% static '/async.js' %}"></script>
+ 	<style>
 		body {
 			background-image:url({% static "/img/bg.png" %});
 			background-repeat: no-repeat;
@@ -156,8 +156,8 @@
 			position:fixed;
 			left:18px;
 			top:80px;
-			width: 0; 
-			height: 0; 
+			width: 0;
+			height: 0;
 			border-left: 10px solid transparent;
 			border-right: 10px solid transparent;
 			border-bottom: 10px solid rgba(40,40,40,0.8);
@@ -186,7 +186,7 @@
 		{% endif %}
 		{% if scanfile and not address %}
 		<div class="col s5 right hide-on-med-and-down" style="margin-right:20px;">
-			<a href="/" class="breadcrumb">{{ scanfile }}</a> 
+			<a href="/" class="breadcrumb">{{ scanfile }}</a>
 		</div>
 		{% endif %}
 		<div class="row">
