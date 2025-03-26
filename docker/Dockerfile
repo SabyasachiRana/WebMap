@@ -29,8 +29,8 @@ RUN mkdir /opt/xml && mkdir /opt/notes && \
 
 RUN pip3 install Django requests xmltodict && \
     cd /opt/ && django-admin startproject nmapdashboard && cd /opt/nmapdashboard && \
-    git clone https://github.com/SabyasachiRana/WebMap.git nmapreport && \
-    cd nmapreport && git checkout master
+    git clone https://github.com/ss-o/WebMap.git nmapreport && \
+    cd nmapreport && git checkout main
 
 RUN cp /opt/nmapdashboard/nmapreport/docker/settings.py /opt/nmapdashboard/nmapdashboard/
 RUN cp /opt/nmapdashboard/nmapreport/docker/urls.py /opt/nmapdashboard/nmapdashboard/
@@ -40,7 +40,7 @@ RUN cp /opt/nmapdashboard/nmapreport/docker/startup.sh /startup.sh
 RUN cd /opt/nmapdashboard && python3 manage.py migrate
 RUN apt-get autoremove -y
 RUN ln -s /opt/nmapdashboard/nmapreport/token.py /root/token
-RUN chmod +x /root/token
+RUN chmod +x /root/token  
 
 EXPOSE 8000
 
