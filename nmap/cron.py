@@ -3,7 +3,7 @@ import os, re, json, time
 
 cdir = os.path.dirname(os.path.realpath(__file__))
 
-schedfiles = os.listdir(cdir+'/schedule/')
+schedfiles = os.listdir('/opt/schedule/')
 
 def gethours(f):
 	return {
@@ -14,8 +14,8 @@ def gethours(f):
 	}[f]
 
 for i in schedfiles:
-	if re.search('^[a-f0-9]{32,32}\.json$', i.strip()) is not None:
-		sched = json.loads(open(cdir+'/schedule/'+i, "r").read())
+	if re.search(r'^[a-f0-9]{32,32}\.json$', i.strip()) is not None:
+		sched = json.loads(open('/opt/schedule/'+i, "r").read())
 		
 		nextrun = (sched['lastrun'] + gethours(sched['params']['frequency']))
 		if nextrun <= time.time():
@@ -30,7 +30,7 @@ for i in schedfiles:
 
 			print(nmapout)
 
-			f = open(cdir+'/schedule/'+i, "w")
+			f = open('/opt/schedule/'+i, "w")
 			f.write(json.dumps(sched, indent=4))
 
 			time.sleep(10)

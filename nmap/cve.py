@@ -6,6 +6,11 @@ def getcpe(xmlfile):
 	oo = xmltodict.parse(open('/opt/xml/'+xmlfile, 'r').read())
 	o = json.loads(json.dumps(oo['nmaprun'], indent=4))
 
+	# if we didn't find any host, we are done
+	if 'host' not in o:
+		res = {'cpe':cpe,'cve':cve}
+		return res
+
 	for ik in o['host']:
 
 		# this fix single host report

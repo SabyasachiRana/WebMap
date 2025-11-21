@@ -84,3 +84,7 @@ target/
 
 # webmap PDF report
 static/*.pdf
+
+# suggested docker persistance folders
+_container/
+

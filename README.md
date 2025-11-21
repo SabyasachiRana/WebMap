@@ -27,16 +27,18 @@ A Web Dashbord for Nmap XML Report
 ## Usage
 You should use this with docker, just by sending this command:
 ```bash
-$ mkdir /tmp/webmap
+$ mkdir -p _container/xml _container/notes _container/notes
 $ docker run -d \
          --name webmap \
          -h webmap \
          -p 8000:8000 \
-         -v /tmp/webmap:/opt/xml \
-         reborntc/webmap
+         -v ./_container/xml:/opt/xml \
+         -v ./_container/notes:/opt/notes \
+         -v ./_container/schedule:/opt/schedule \
+         loiusc/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
-$ nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml 192.168.1.0/24
+$ docker exec -ti webmap nmap -sT -A -T4 -oX /opt/xml/myscan.xml 192.168.1.0/24
 ```
 Now point your browser to http://localhost:8000
 
@@ -55,15 +57,15 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull reborntc/webmap
-
-$ # run WebMap
-$ curl -sL http://bit.ly/webmapsetup | bash
+$ docker pull loiusc/webmap
 ```
+
+The mapped docker volumes make sure that scans, notes, labels and schedules will persist.
+As a workaround host folder .../schedule gives access to manually delete (or modify) scan schedules.
 
 ### Run without Docker
 This project is designed to run on a Docker container. IMHO it isn't a good idea to run this on a custom Django installation, 
-but if you need it you can find all building steps inside the [Dockerfile](https://github.com/SabyasachiRana/WebMap/blob/master/docker/Dockerfile).
+but if you need it you can find all building steps inside the [Dockerfile](https://github.com/LoiusCypher/WebMap/blob/master/docker/Dockerfile).
 
 ## Video
 The HTML template changes often. This video could not be up to date with the latest version.
@@ -277,4 +279,11 @@ This app is not intended to be exposed to the internet, but to be used as localh
 in case you can't do it, take care to filter who and what can access to WebMap with a firewall rule or something like that. 
 Exposing this app to the whole internet could lead not only to a stored XSS but also to a leakage of sensitive/critical/private 
 informations about your port scan. Please, be smart.
+
+## Contributors
+- [Sabyasachi Rana](https://github.com/SabyasachiRana)
+- [Tristan BRINGUIER](https://github.com/tbringuier)
+- [Ahmed Anwar](https://github.com/AA-Hamza^)
+- [Djozeppe](https://github.com/djozeppe)
+- [LoiusCypher](https://github.com/LoiusCypher)
 

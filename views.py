@@ -57,7 +57,7 @@ def details(request, address):
 	labelhost = {}
 	labelfiles = os.listdir('/opt/notes')
 	for lf in labelfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.host\.label$', lf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.host\.label$', lf)
 		if m is not None:
 			if m.group(1) not in labelhost:
 				labelhost[m.group(1)] = {}
@@ -67,7 +67,7 @@ def details(request, address):
 	noteshost = {}
 	notesfiles = os.listdir('/opt/notes')
 	for nf in notesfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.notes$', nf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.notes$', nf)
 		if m is not None:
 			if m.group(1) not in noteshost:
 				noteshost[m.group(1)] = {}
@@ -111,8 +111,8 @@ def details(request, address):
 			r['hostname'] = hostname
 
 			scantitle = request.session['scanfile'].replace('.xml','').replace('_',' ')
-			if re.search('^webmapsched\_[0-9\.]+', request.session['scanfile']):
-				m = re.search('^webmapsched\_[0-9\.]+\_(.+)', request.session['scanfile'])
+			if re.search(r'^webmapsched\_[0-9\.]+', request.session['scanfile']):
+				m = re.search(r'^webmapsched\_[0-9\.]+\_(.+)', request.session['scanfile'])
 				scantitle = m.group(1).replace('.xml','').replace('_',' ')
 			r['scanfile'] = scantitle
 
@@ -349,7 +349,7 @@ def index(request, filterservice="", filterportid=""):
 
 		xmlfilescount = 0
 		for i in xmlfiles:
-			if re.search('\.xml$', i) is None:
+			if re.search(r'\.xml$', i) is None:
 				continue
 
 			#portstats = {}
@@ -378,8 +378,8 @@ def index(request, filterservice="", filterportid=""):
 				viewhref = '#!'
 
 			filename = i
-			if re.search('^webmapsched\_[0-9\.]+',i):
-				m = re.search('^webmapsched\_([0-9\.]+)\_(.+)',i)
+			if re.search(r'^webmapsched\_[0-9\.]+',i):
+				m = re.search(r'^webmapsched\_([0-9\.]+)\_(.+)',i)
 				filename = '<i class="fas fa-calendar-alt grey-text"></i> '+html.escape(m.group(2))
 
 			portstats = nmap_ports_stats(i)
@@ -410,7 +410,7 @@ def index(request, filterservice="", filterportid=""):
 	labelhost = {}
 	labelfiles = os.listdir('/opt/notes')
 	for lf in labelfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.host\.label$', lf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.host\.label$', lf)
 		if m is not None:
 			if m.group(1) not in labelhost:
 				labelhost[m.group(1)] = {}
@@ -420,7 +420,7 @@ def index(request, filterservice="", filterportid=""):
 	noteshost = {}
 	notesfiles = os.listdir('/opt/notes')
 	for nf in notesfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.notes$', nf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.notes$', nf)
 		if m is not None:
 			if m.group(1) not in noteshost:
 				noteshost[m.group(1)] = {}
@@ -622,8 +622,8 @@ def index(request, filterservice="", filterportid=""):
 				tags = []
 				extrainfosplit = e.split(' ')
 				for eis in extrainfosplit:
-					if re.search('[a-zA-Z0-9\_]+\/[0-9\.]+', eis) is not None:
-						robj = re.search('([a-zA-Z0-9\_]+)\/([0-9\.]+)', eis)
+					if re.search(r'[a-zA-Z0-9\_]+\/[0-9\.]+', eis) is not None:
+						robj = re.search(r'([a-zA-Z0-9\_]+)\/([0-9\.]+)', eis)
 						tags.append(robj.group(1)+' '+robj.group(2))
 
 
