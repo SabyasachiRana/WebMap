@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Nov 23 12:47:34 2025 as: /usr/bin/nmap -sT -A -T4 -&#45;script=/opt/nmapdashboard/nmapreport/nmap/nse/ -oX /tmp/17_test_daily_net.xml.active 192.168.2.112/24 -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sT -A -T4 -&#45;script=/opt/nmapdashboard/nmapreport/nmap/nse/ -oX /tmp/17_test_daily_net.xml.active 192.168.2.112/24" start="1763902054" startstr="Sun Nov 23 12:47:34 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1000" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.100" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.106" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.227" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.225" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.2.214" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1763902059" endtime="1763902226"><status state="up" reason="echo-reply" reason_ttl="254"/>
+<address addr="192.168.2.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="995">
+<extrareasons reason="no-response" count="995" proto="tcp" ports="1,3-4,6-7,9,13,17,19-20,24-26,30,32-33,37,42-43,49,53,70,79,81-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,444-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" servicefp="SF-Port21-TCP:V=7.95%I=7%D=11/23%Time=6923027A%P=aarch64-unknown-linux-gnu%r(NULL,C,&quot;220\x20FTP\x20OK\r\n&quot;)%r(GenericLines,C,&quot;220\x20FTP\x20OK\r\n&quot;)%r(Help,24,&quot;220\x20FTP\x20OK\r\n331\x20Enter\x20PASS\x20command\r\n&quot;)%r(GetRequest,2D,&quot;220\x20FTP\x20OK\r\n502\x20Command\x20not\x20yet\x20implemented\r\n&quot;)%r(HTTPOptions,2D,&quot;220\x20FTP\x20OK\r\n502\x20Command\x20not\x20yet\x20implemented\r\n&quot;)%r(RTSPRequest,2D,&quot;220\x20FTP\x20OK\r\n502\x20Command\x20not\x20yet\x20implemented\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, NULL: &#xa;    220 FTP OK&#xa;  GetRequest, HTTPOptions, RTSPRequest: &#xa;    220 FTP OK&#xa;    Command not yet implemented&#xa;  Help: &#xa;    220 FTP OK&#xa;    Enter PASS command"><elem key="GenericLines, NULL">&#xa;    220 FTP OK</elem>
+<elem key="GetRequest, HTTPOptions, RTSPRequest">&#xa;    220 FTP OK&#xa;    Command not yet implemented</elem>
+<elem key="Help">&#xa;    220 FTP OK&#xa;    Enter PASS command</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" extrainfo="protocol 2.0" servicefp="SF-Port22-TCP:V=7.95%I=7%D=11/23%Time=6923027A%P=aarch64-unknown-linux-gnu%r(NULL,F,&quot;SSH-2\.0-Server\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  NULL: &#xa;    SSH-2.0-Server"><elem key="NULL">&#xa;    SSH-2.0-Server</elem>
+</script></port>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Server" servicefp="SF-Port80-TCP:V=7.95%I=7%D=11/23%Time=69230279%P=aarch64-unknown-linux-gnu%r(GetRequest,1CC,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/weblogin\.htm\r\nContent-Security-Policy:\x20default-src\x20&apos;self&apos;;frame-ancestors\x20&apos;self&apos;;form-action\x20&apos;self&apos;;script-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;\x20&apos;unsafe-inline&apos;;style-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;;img-src\x20&apos;self&apos;\x20data:;connect-src\x20&apos;self&apos;\x20\*\.draytek\.com\.tw\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:52\x20GMT\r\nServer:\x20Server\r\n\r\n&quot;)%r(HTTPOptions,1CC,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/weblogin\.htm\r\nContent-Security-Policy:\x20default-src\x20&apos;self&apos;;frame-ancestors\x20&apos;self&apos;;form-action\x20&apos;self&apos;;script-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;\x20&apos;unsafe-inline&apos;;style-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;;img-src\x20&apos;self&apos;\x20data:;connect-src\x20&apos;self&apos;\x20\*\.draytek\.com\.tw\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:52\x20GMT\r\nServer:\x20Server\r\n\r\n&quot;)%r(RTSPRequest,149,&quot;HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nContent-Length:\x20183\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:53\x20GMT\r\nServer:\x20Server\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;400\x20-\x20Bad\x20Request&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;400\x20-\x20Bad\x20Request&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(FourOhFourRequest,1A2,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x20179\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:58\x20GMT\r\nServer:\x20Server\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;404\x20-\x20Not\x20Found&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;404\x20-\x20Not\x20Found&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Length: 179&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:58 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 - Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 - Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.0 302 Found&#xa;    Location: /weblogin.htm&#xa;    Content-Security-Policy: default-src &apos;self&apos;;frame-ancestors &apos;self&apos;;form-action &apos;self&apos;;script-src &apos;self&apos; &apos;nonce-draytek&apos; &apos;unsafe-inline&apos;;style-src &apos;self&apos; &apos;nonce-draytek&apos;;img-src &apos;self&apos; data:;connect-src &apos;self&apos; *.draytek.com.tw&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:52 GMT&#xa;    Server: Server&#xa;  RTSPRequest: &#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 183&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:53 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 - Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 - Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;"><elem key="FourOhFourRequest">&#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Length: 179&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:58 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 - Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 - Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.0 302 Found&#xa;    Location: /weblogin.htm&#xa;    Content-Security-Policy: default-src &apos;self&apos;;frame-ancestors &apos;self&apos;;form-action &apos;self&apos;;script-src &apos;self&apos; &apos;nonce-draytek&apos; &apos;unsafe-inline&apos;;style-src &apos;self&apos; &apos;nonce-draytek&apos;;img-src &apos;self&apos; data:;connect-src &apos;self&apos; *.draytek.com.tw&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:52 GMT&#xa;    Server: Server</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 183&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:53 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 - Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 - Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+</script><script id="http-server-header" output="Server"><elem>Server</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" product="Server" servicefp="SF-Port443-TCP:V=7.95%T=SSL%I=7%D=11/23%Time=69230280%P=aarch64-unknown-linux-gnu%r(GetRequest,20C,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/weblogin\.htm\r\nContent-Security-Policy:\x20default-src\x20&apos;self&apos;;frame-ancestors\x20&apos;self&apos;;form-action\x20&apos;self&apos;;script-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;\x20&apos;unsafe-inline&apos;;style-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;;img-src\x20&apos;self&apos;\x20data:;connect-src\x20&apos;self&apos;\x20\*\.draytek\.com\.tw\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubdomains\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:59\x20GMT\r\nServer:\x20Server\r\n\r\n&quot;)%r(HTTPOptions,20C,&quot;HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/weblogin\.htm\r\nContent-Security-Policy:\x20default-src\x20&apos;self&apos;;frame-ancestors\x20&apos;self&apos;;form-action\x20&apos;self&apos;;script-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;\x20&apos;unsafe-inline&apos;;style-src\x20&apos;self&apos;\x20&apos;nonce-draytek&apos;;img-src\x20&apos;self&apos;\x20data:;connect-src\x20&apos;self&apos;\x20\*\.draytek\.com\.tw\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubdomains\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:59\x20GMT\r\nServer:\x20Server\r\n\r\n&quot;)%r(FourOhFourRequest,1E2,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubdomains\r\nContent-Length:\x20179\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:48:00\x20GMT\r\nServer:\x20Server\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;404\x20-\x20Not\x20Found&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;404\x20-\x20Not\x20Found&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(GenericLines,149,&quot;HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nContent-Length:\x20183\r\nConnection:\x20close\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:48:06\x20GMT\r\nServer:\x20Server\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;400\x20-\x20Bad\x20Request&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;400\x20-\x20Bad\x20Request&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Strict-Transport-Security: max-age=31536000; includeSubdomains&#xa;    Content-Length: 179&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:48:00 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 - Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 - Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  GenericLines: &#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 183&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:48:06 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 - Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 - Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.0 302 Found&#xa;    Location: /weblogin.htm&#xa;    Content-Security-Policy: default-src &apos;self&apos;;frame-ancestors &apos;self&apos;;form-action &apos;self&apos;;script-src &apos;self&apos; &apos;nonce-draytek&apos; &apos;unsafe-inline&apos;;style-src &apos;self&apos; &apos;nonce-draytek&apos;;img-src &apos;self&apos; data:;connect-src &apos;self&apos; *.draytek.com.tw&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Strict-Transport-Security: max-age=31536000; includeSubdomains&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:59 GMT&#xa;    Server: Server"><elem key="FourOhFourRequest">&#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Strict-Transport-Security: max-age=31536000; includeSubdomains&#xa;    Content-Length: 179&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:48:00 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 - Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 - Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="GenericLines">&#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 183&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:48:06 GMT&#xa;    Server: Server&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 - Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 - Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.0 302 Found&#xa;    Location: /weblogin.htm&#xa;    Content-Security-Policy: default-src &apos;self&apos;;frame-ancestors &apos;self&apos;;form-action &apos;self&apos;;script-src &apos;self&apos; &apos;nonce-draytek&apos; &apos;unsafe-inline&apos;;style-src &apos;self&apos; &apos;nonce-draytek&apos;;img-src &apos;self&apos; data:;connect-src &apos;self&apos; *.draytek.com.tw&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Strict-Transport-Security: max-age=31536000; includeSubdomains&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Sun, 23 Nov 2025 12:47:59 GMT&#xa;    Server: Server</elem>
+</script><script id="http-server-header" output="Server"><elem>Server</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Fortinet FortiGate 100D firewall" accuracy="87" line="27203">
+<osclass type="firewall" vendor="Fortinet" osfamily="embedded" accuracy="87"><cpe>cpe:/h:fortinet:fortigate_100d</cpe></osclass>
+</osmatch>
+<osmatch name="Fortinet FortiGate 1500D firewall" accuracy="87" line="27221">
+<osclass type="firewall" vendor="Fortinet" osfamily="embedded" accuracy="87"><cpe>cpe:/h:fortinet:fortigate_1500d</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.1" rtt="0.44"/>
+</trace>
+<times srtt="620" rttvar="211" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902209"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.2.100" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="999">
+<extrareasons reason="no-response" count="999" proto="tcp" ports="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="3000"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ppp" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="tcp" portid="3000"/>
+<osmatch name="Linux 2.6.11" accuracy="100" line="50969">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.11</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18" accuracy="100" line="52278">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.20.6" accuracy="100" line="54057">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.20.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.23" accuracy="100" line="55300">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.23</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="100" line="61443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="VMware ESX Server 3.0.2" accuracy="100" line="110621">
+<osclass type="specialized" vendor="VMware" osfamily="ESX Server" osgen="3.X" accuracy="100"><cpe>cpe:/o:vmware:esx:3.0:2</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.100" rtt="0.42"/>
+</trace>
+<times srtt="822" rttvar="580" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902225"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.2.106" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="997">
+<extrareasons reason="conn-refused" count="997" proto="tcp" ports="1,3-4,6-7,9,13,17,19-21,23-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999,8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="vulnerability-lookup" output="&#xa;  cpe:2.3:a:openbsd:openssh:10.0:p2: &#xa;    &#x9;CVE-2024-6387&#x9;8.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-6387&#xa;    &#x9;CVE-2025-26465&#x9;6.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26465&#xa;    &#x9;CVE-2025-26466&#x9;5.9&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26466&#xa;    &#x9;CVE-2025-32728&#x9;4.3&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-32728&#xa;    &#x9;CVE-2025-61985&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61985&#xa;    &#x9;CVE-2025-61984&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61984&#xa;    &#x9;CVE-2023-51767&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51767&#xa;    &#x9;CVE-2023-51385&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51385&#xa;    &#x9;CVE-2023-48795&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-48795&#xa;    &#x9;CVE-2023-38408&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-38408&#xa;    &#x9;CVE-2023-28531&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-28531&#xa;    &#x9;CVE-2019-16905&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2019-16905&#xa;    &#x9;CVE-2016-10009&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-10009&#xa;    &#x9;CVE-2003-1562&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2003-1562&#xa;    &#x9;CVE-2001-1585&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1585&#xa;    &#x9;CVE-2001-1507&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1507&#xa;    &#x9;CVE-2001-1459&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1459&#xa;    &#x9;CVE-2001-1382&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1382&#xa;    &#x9;CVE-2001-1380&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1380&#xa;    &#x9;CVE-2001-1029&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1029&#xa;    &#x9;CVE-2001-0872&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0872&#xa;    &#x9;CVE-2001-0816&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0816&#xa;    &#x9;CVE-2001-0572&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0572&#xa;    &#x9;CVE-2001-0529&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0529&#xa;    &#x9;CVE-2000-1169&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-1169&#xa;    &#x9;CVE-2000-0999&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0999&#xa;    &#x9;CVE-2000-0992&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0992&#xa;    &#x9;CVE-2000-0525&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0525&#xa;    &#x9;CVE-2000-0217&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0217&#xa;    &#x9;CVE-2000-0143&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0143&#xa;  cpe:2.3:o:linux:linux_kernel: &#xa;    &#x9;CVE-2023-5178&#x9;8.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5178&#xa;    &#x9;CVE-2023-39191&#x9;8.2&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39191&#xa;    &#x9;CVE-2024-0562&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0562&#xa;    &#x9;CVE-2023-4004&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4004&#xa;    &#x9;CVE-2023-6610&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6610&#xa;    &#x9;CVE-2023-6606&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6606&#xa;    &#x9;CVE-2023-42753&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42753&#xa;    &#x9;CVE-2023-3640&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3640&#xa;    &#x9;CVE-2023-39192&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39192&#xa;    &#x9;CVE-2023-33952&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33952&#xa;    &#x9;CVE-2023-33951&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33951&#xa;    &#x9;CVE-2023-6536&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6536&#xa;    &#x9;CVE-2023-6535&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6535&#xa;    &#x9;CVE-2023-6356&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6356&#xa;    &#x9;CVE-2023-6240&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6240&#xa;    &#x9;CVE-2023-42755&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42755&#xa;    &#x9;CVE-2023-5090&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5090&#xa;    &#x9;CVE-2023-4273&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4273&#xa;    &#x9;CVE-2024-1151&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-1151&#xa;    &#x9;CVE-2024-0443&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0443&#xa;    &#x9;CVE-2023-4459&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4459&#xa;    &#x9;CVE-2023-4194&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4194&#xa;    &#x9;CVE-2023-4132&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4132&#xa;    &#x9;CVE-2023-3773&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3773&#xa;    &#x9;CVE-2023-3772&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3772&#xa;    &#x9;CVE-2025-4598&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-4598&#xa;    &#x9;CVE-2023-4732&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4732&#xa;    &#x9;CVE-2024-0340&#x9;4.4&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0340&#xa;    &#x9;CVE-2021-33624&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-33624&#xa;    &#x9;CVE-2016-4117&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-4117"><table key="cpe:2.3:a:openbsd:openssh:10.0:p2">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-6387</elem>
+<elem key="cvss">8.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26465</elem>
+<elem key="cvss">6.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26466</elem>
+<elem key="cvss">5.9</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-32728</elem>
+<elem key="cvss">4.3</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61985</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61984</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51767</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51385</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-48795</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-38408</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-28531</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2019-16905</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-10009</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2003-1562</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1585</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1507</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1459</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1382</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1380</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1029</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0872</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0816</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0572</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0529</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-1169</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0999</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0992</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0525</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0217</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0143</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+<table key="cpe:2.3:o:linux:linux_kernel">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5178</elem>
+<elem key="cvss">8.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39191</elem>
+<elem key="cvss">8.2</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0562</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4004</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6610</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6606</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42753</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3640</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39192</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33952</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33951</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6536</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6535</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6356</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6240</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42755</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5090</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4273</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-1151</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0443</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4459</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4194</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4132</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3773</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3772</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-4598</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4732</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0340</elem>
+<elem key="cvss">4.4</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-33624</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-4117</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Golang net/http server" servicefp="SF-Port8000-TCP:V=7.95%I=7%D=11/23%Time=6923027A%P=aarch64-unknown-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,430,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x20864\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Thu,\x2007\x20Aug\x202025\x2003:16:48\x20GMT\r\nVary:\x20Accept-Encoding\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index\.839b87b9\.js\&quot;&gt;&lt;/script&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href&quot;)%r(FourOhFourRequest,430,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x20864\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Thu,\x2007\x20Aug\x202025\x2003:16:48\x20GMT\r\nVary:\x20Accept-Encoding\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index\.839b87b9\.js\&quot;&gt;&lt;/script&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href&quot;);" method="probed" conf="10"><cpe>cpe:/a:golang:go</cpe></service><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Content-Length: 864&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Thu, 07 Aug 2025 03:16:48 GMT&#xa;    Vary: Accept-Encoding&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index.839b87b9.js&quot;&gt;&lt;/script&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request"><elem key="FourOhFourRequest, GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Content-Length: 864&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Thu, 07 Aug 2025 03:16:48 GMT&#xa;    Vary: Accept-Encoding&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index.839b87b9.js&quot;&gt;&lt;/script&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href</elem>
+<elem key="GenericLines">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+</script></port>
+<port protocol="tcp" portid="8001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="40505"/>
+<osmatch name="Linux 5.0 - 5.14" accuracy="100" line="71713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)" accuracy="100" line="91792">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="7.X" accuracy="100"><cpe>cpe:/o:mikrotik:routeros:7</cpe></osclass>
+<osclass type="router" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5.6.3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="4112872" lastboot="Mon Oct  6 22:22:34 2025"/>
+<distance value="2"/>
+<tcpsequence index="259" difficulty="Good luck!" values="8AB485B5,2BD39141,7016CF30,537EDA42,65CD2CA4,1B24E9BA"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="F525284E,F52528B3,F5252919,F525297D,F52529E2,F5252A46"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.106" rtt="0.60"/>
+</trace>
+<times srtt="694" rttvar="159" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902225"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.2.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998" proto="tcp" ports="1,3-4,6-7,9,13,17,19-21,23-26,30,32-33,37,42-43,49,53,70,79,81-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="vulnerability-lookup" output="&#xa;  cpe:2.3:a:openbsd:openssh:10.0:p2: &#xa;    &#x9;CVE-2024-6387&#x9;8.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-6387&#xa;    &#x9;CVE-2025-26465&#x9;6.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26465&#xa;    &#x9;CVE-2025-26466&#x9;5.9&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26466&#xa;    &#x9;CVE-2025-32728&#x9;4.3&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-32728&#xa;    &#x9;CVE-2025-61985&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61985&#xa;    &#x9;CVE-2025-61984&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61984&#xa;    &#x9;CVE-2023-51767&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51767&#xa;    &#x9;CVE-2023-51385&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51385&#xa;    &#x9;CVE-2023-48795&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-48795&#xa;    &#x9;CVE-2023-38408&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-38408&#xa;    &#x9;CVE-2023-28531&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-28531&#xa;    &#x9;CVE-2019-16905&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2019-16905&#xa;    &#x9;CVE-2016-10009&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-10009&#xa;    &#x9;CVE-2003-1562&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2003-1562&#xa;    &#x9;CVE-2001-1585&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1585&#xa;    &#x9;CVE-2001-1507&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1507&#xa;    &#x9;CVE-2001-1459&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1459&#xa;    &#x9;CVE-2001-1382&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1382&#xa;    &#x9;CVE-2001-1380&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1380&#xa;    &#x9;CVE-2001-1029&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1029&#xa;    &#x9;CVE-2001-0872&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0872&#xa;    &#x9;CVE-2001-0816&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0816&#xa;    &#x9;CVE-2001-0572&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0572&#xa;    &#x9;CVE-2001-0529&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0529&#xa;    &#x9;CVE-2000-1169&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-1169&#xa;    &#x9;CVE-2000-0999&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0999&#xa;    &#x9;CVE-2000-0992&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0992&#xa;    &#x9;CVE-2000-0525&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0525&#xa;    &#x9;CVE-2000-0217&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0217&#xa;    &#x9;CVE-2000-0143&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0143&#xa;  cpe:2.3:o:linux:linux_kernel: &#xa;    &#x9;CVE-2023-5178&#x9;8.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5178&#xa;    &#x9;CVE-2023-39191&#x9;8.2&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39191&#xa;    &#x9;CVE-2024-0562&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0562&#xa;    &#x9;CVE-2023-4004&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4004&#xa;    &#x9;CVE-2023-6610&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6610&#xa;    &#x9;CVE-2023-6606&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6606&#xa;    &#x9;CVE-2023-42753&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42753&#xa;    &#x9;CVE-2023-3640&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3640&#xa;    &#x9;CVE-2023-39192&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39192&#xa;    &#x9;CVE-2023-33952&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33952&#xa;    &#x9;CVE-2023-33951&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33951&#xa;    &#x9;CVE-2023-6536&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6536&#xa;    &#x9;CVE-2023-6535&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6535&#xa;    &#x9;CVE-2023-6356&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6356&#xa;    &#x9;CVE-2023-6240&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6240&#xa;    &#x9;CVE-2023-42755&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42755&#xa;    &#x9;CVE-2023-5090&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5090&#xa;    &#x9;CVE-2023-4273&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4273&#xa;    &#x9;CVE-2024-1151&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-1151&#xa;    &#x9;CVE-2024-0443&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0443&#xa;    &#x9;CVE-2023-4459&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4459&#xa;    &#x9;CVE-2023-4194&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4194&#xa;    &#x9;CVE-2023-4132&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4132&#xa;    &#x9;CVE-2023-3773&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3773&#xa;    &#x9;CVE-2023-3772&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3772&#xa;    &#x9;CVE-2025-4598&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-4598&#xa;    &#x9;CVE-2023-4732&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4732&#xa;    &#x9;CVE-2024-0340&#x9;4.4&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0340&#xa;    &#x9;CVE-2021-33624&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-33624&#xa;    &#x9;CVE-2016-4117&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-4117"><table key="cpe:2.3:a:openbsd:openssh:10.0:p2">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-6387</elem>
+<elem key="cvss">8.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26465</elem>
+<elem key="cvss">6.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26466</elem>
+<elem key="cvss">5.9</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-32728</elem>
+<elem key="cvss">4.3</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61985</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61984</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51767</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51385</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-48795</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-38408</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-28531</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2019-16905</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-10009</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2003-1562</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1585</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1507</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1459</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1382</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1380</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1029</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0872</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0816</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0572</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0529</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-1169</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0999</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0992</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0525</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0217</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0143</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+<table key="cpe:2.3:o:linux:linux_kernel">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5178</elem>
+<elem key="cvss">8.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39191</elem>
+<elem key="cvss">8.2</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0562</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4004</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6610</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6606</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42753</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3640</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39192</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33952</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33951</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6536</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6535</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6356</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6240</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42755</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5090</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4273</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-1151</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0443</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4459</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4194</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4132</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3773</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3772</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-4598</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4732</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0340</elem>
+<elem key="cvss">4.4</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-33624</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-4117</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.65" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.65</cpe></service><script id="http-server-header" output="Apache/2.4.65 (Debian)"><elem>Apache/2.4.65 (Debian)</elem>
+</script><script id="vulnerability-lookup" output="&#xa;  cpe:2.3:a:apache:http_server:2.4.65: &#xa;    &#x9;CVE-2025-3891&#x9;7.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-3891&#xa;    &#x9;CVE-2025-54090&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-54090&#xa;    &#x9;CVE-2025-53020&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-53020&#xa;    &#x9;CVE-2025-49812&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-49812&#xa;    &#x9;CVE-2025-49630&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-49630&#xa;    &#x9;CVE-2025-23048&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-23048&#xa;    &#x9;CVE-2024-47252&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-47252&#xa;    &#x9;CVE-2024-43394&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-43394&#xa;    &#x9;CVE-2024-43204&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-43204&#xa;    &#x9;CVE-2024-42516&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-42516&#xa;    &#x9;CVE-2024-40725&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-40725&#xa;    &#x9;CVE-2024-39884&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-39884&#xa;    &#x9;CVE-2024-39573&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-39573&#xa;    &#x9;CVE-2024-38477&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-38477&#xa;    &#x9;CVE-2024-38476&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-38476&#xa;    &#x9;CVE-2024-38475&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-38475&#xa;    &#x9;CVE-2024-38474&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-38474&#xa;    &#x9;CVE-2024-38473&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-38473&#xa;    &#x9;CVE-2024-36387&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-36387&#xa;    &#x9;CVE-2024-27316&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-27316&#xa;    &#x9;CVE-2023-43622&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-43622&#xa;    &#x9;CVE-2023-38709&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-38709&#xa;    &#x9;CVE-2022-37436&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2022-37436&#xa;    &#x9;CVE-2022-36760&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2022-36760&#xa;    &#x9;CVE-2021-42013&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-42013&#xa;    &#x9;CVE-2021-41773&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-41773&#xa;    &#x9;CVE-2021-40438&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-40438&#xa;    &#x9;CVE-2019-0211&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2019-0211&#xa;    &#x9;CVE-2017-9798&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2017-9798&#xa;    &#x9;CVE-2017-3167&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2017-3167"><table key="cpe:2.3:a:apache:http_server:2.4.65">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-3891</elem>
+<elem key="cvss">7.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-54090</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-53020</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-49812</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-49630</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-23048</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-47252</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-43394</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-43204</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-42516</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-40725</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-39884</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-39573</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-38477</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-38476</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-38475</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-38474</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-38473</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-36387</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-27316</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-43622</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-38709</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2022-37436</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2022-36760</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-42013</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-41773</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-40438</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2019-0211</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2017-9798</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2017-3167</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="40246"/>
+<osmatch name="Linux 5.0 - 5.14" accuracy="100" line="71713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="3409187" lastboot="Wed Oct 15 01:50:39 2025"/>
+<distance value="2"/>
+<tcpsequence index="250" difficulty="Good luck!" values="76B268C7,1716AA5C,7048E709,36736C90,963355AE,EDBE5837"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="CB33C8DE,CB33C943,CB33C9A8,CB33CA0D,CB33CA72,CB33CAD6"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.112" rtt="0.65"/>
+</trace>
+<times srtt="726" rttvar="153" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902225"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="192.168.2.214" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="998">
+<extrareasons reason="no-response" count="998" proto="tcp" ports="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79,81-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="S850A GO/42.263.00.000.000" servicefp="SF-Port80-TCP:V=7.95%I=7%D=11/23%Time=6923027F%P=aarch64-unknown-linux-gnu%r(GetRequest,361,&quot;HTTP/1\.1\x20302\x20Found\r\nConnection:\x20Keep-Alive\r\nServer:\x20S850A\x20GO/42\.263\.00\.000\.000\r\nContent-Type:\x20text/html\r\nContent-Length:\x20737\r\n\r\n\xef\xbb\xbf&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\&quot;\x20\&quot;http://www\.w3\.org/TR/html4/loose\.dtd\&quot;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;title&gt;302-Found&lt;/title&gt;\r\n&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\r\n&lt;meta\x20http-equiv=\&quot;X-UA-Compatible\&quot;\x20content=\&quot;IE=edge\&quot;&gt;\r\n\r\n&lt;link\x20rel=\&quot;shortcut\x20icon\&quot;\x20href=\&quot;/images/favicon\.ico\&quot;&gt;\r\n\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;h1&gt;302-Found&lt;/h1&gt;\r\n&lt;a\x20href=&apos;/login\.html\?id=255&apos;&gt;/login\.html&lt;/a&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n&quot;)%r(HTTPOptions,4B,&quot;HTTP/1\.1\x20501\x20Not\x20Implemented\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x200\r\n\r\n&quot;)%r(FourOhFourRequest,341,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nServer:\x20S850A\x20GO/42\.263\.00\.000\.000\r\nContent-Type:\x20text/html\r\nContent-Length:\x20701\r\n\r\n\xef\xbb\xbf&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\&quot;\x20\&quot;http://www\.w3\.org/TR/html4/loose\.dtd\&quot;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;!-&#45;\x20this\x20page\x20must\x20have\x20520\x20bytes\x20or\x20more,\x20ie\x20is\x20a\x20wonderfull\x20program\x20-&#45;&gt;\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;title&gt;404-Not\x20Found&lt;/title&gt;\r\n&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\r\n&lt;meta\x20http-equiv=\&quot;X-UA-Compatible\&quot;\x20content=\&quot;IE=edge\&quot;&gt;\r\n\r\n&lt;link\x20rel=\&quot;shortcut\x20icon\&quot;\x20href=\&quot;/images/favicon\.ico\&quot;&gt;\r\n\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;h1&gt;404-Not\x20Found&lt;/h1&gt;\r\n\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Connection: Keep-Alive&#xa;    Server: S850A GO/42.263.00.000.000&#xa;    Content-Type: text/html&#xa;    Content-Length: 701&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404-Not Found&lt;/title&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.ico&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404-Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  GetRequest: &#xa;    HTTP/1.1 302 Found&#xa;    Connection: Keep-Alive&#xa;    Server: S850A GO/42.263.00.000.000&#xa;    Content-Type: text/html&#xa;    Content-Length: 737&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;302-Found&lt;/title&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.ico&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;302-Found&lt;/h1&gt;&#xa;    href=&apos;/login.html?id=255&apos;&gt;/login.html&lt;/a&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  HTTPOptions: &#xa;    HTTP/1.1 501 Not Implemented&#xa;    Connection: Keep-Alive&#xa;    Content-Length: 0"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Connection: Keep-Alive&#xa;    Server: S850A GO/42.263.00.000.000&#xa;    Content-Type: text/html&#xa;    Content-Length: 701&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404-Not Found&lt;/title&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.ico&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404-Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 302 Found&#xa;    Connection: Keep-Alive&#xa;    Server: S850A GO/42.263.00.000.000&#xa;    Content-Type: text/html&#xa;    Content-Length: 737&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;!-&#45; this page must have 520 bytes or more, ie is a wonderfull program -&#45;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;302-Found&lt;/title&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.ico&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;302-Found&lt;/h1&gt;&#xa;    href=&apos;/login.html?id=255&apos;&gt;/login.html&lt;/a&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 501 Not Implemented&#xa;    Connection: Keep-Alive&#xa;    Content-Length: 0</elem>
+</script><script id="http-server-header" output="S850A GO/42.263.00.000.000"><elem>S850A GO/42.263.00.000.000</elem>
+</script></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="sip" product="S850A GO/42.263.00.000.000" extrainfo="Status: 200 OK" servicefp="SF-Port5060-TCP:V=7.95%I=7%D=11/23%Time=69230286%P=aarch64-unknown-linux-gnu%r(SIPOptions,1FD,&quot;SIP/2\.0\x20200\x20OK\r\nVia:\x20SIP/2\.0/TCP\x20nm;branch=foo;received=192\.168\.2\.227\r\nFrom:\x20&lt;sip:nm@nm&gt;;tag=root\r\nTo:\x20&lt;sip:nm2@nm2&gt;;tag=snnu\r\nCall-ID:\x2050000\r\nCSeq:\x2042\x20OPTIONS\r\nSupported:\x20replaces\r\nUser-Agent:\x20S850A\x20GO/42\.263\.00\.000\.000\r\nAllow:\x20INVITE,\x20ACK,\x20CANCEL,\x20BYE,\x20OPTIONS,\x20INFO,\x20SUBSCRIBE,\x20NOTIFY,\x20REFER,\x20UPDATE\r\nAccept:\x20application/sdp,\x20application/dtmf-relay,\x20message/sipfrag,\x20application/simple-message-summary,\x20application/url,\x20multipart/mixed\r\nAccept-Encoding:\x20identity\r\nAccept-Language:\x20en\r\nContent-Length:\x200\r\n\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  SIPOptions: &#xa;    SIP/2.0 200 OK&#xa;    Via: SIP/2.0/TCP nm;branch=foo;received=192.168.2.227&#xa;    From: &lt;sip:nm@nm&gt;;tag=root&#xa;    &lt;sip:nm2@nm2&gt;;tag=snnu&#xa;    Call-ID: 50000&#xa;    CSeq: 42 OPTIONS&#xa;    Supported: replaces&#xa;    User-Agent: S850A GO/42.263.00.000.000&#xa;    Allow: INVITE, ACK, CANCEL, BYE, OPTIONS, INFO, SUBSCRIBE, NOTIFY, REFER, UPDATE&#xa;    Accept: application/sdp, application/dtmf-relay, message/sipfrag, application/simple-message-summary, application/url, multipart/mixed&#xa;    Accept-Encoding: identity&#xa;    Accept-Language: en&#xa;    Content-Length: 0"><elem key="SIPOptions">&#xa;    SIP/2.0 200 OK&#xa;    Via: SIP/2.0/TCP nm;branch=foo;received=192.168.2.227&#xa;    From: &lt;sip:nm@nm&gt;;tag=root&#xa;    &lt;sip:nm2@nm2&gt;;tag=snnu&#xa;    Call-ID: 50000&#xa;    CSeq: 42 OPTIONS&#xa;    Supported: replaces&#xa;    User-Agent: S850A GO/42.263.00.000.000&#xa;    Allow: INVITE, ACK, CANCEL, BYE, OPTIONS, INFO, SUBSCRIBE, NOTIFY, REFER, UPDATE&#xa;    Accept: application/sdp, application/dtmf-relay, message/sipfrag, application/simple-message-summary, application/url, multipart/mixed&#xa;    Accept-Encoding: identity&#xa;    Accept-Language: en&#xa;    Content-Length: 0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="208" difficulty="Good luck!" values="CD5E47,2AA4B3,26A21C,F8EF24,4A9BAF,47C7B7"/>
+<ipidsequence class="Randomized" values="A24A,FEE0,781C,74E0,6CFF,DDAF"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.214" rtt="0.79"/>
+</trace>
+<times srtt="1911" rttvar="1390" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902225"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.2.225" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="997">
+<extrareasons reason="conn-refused" count="997" proto="tcp" ports="1,3-4,6-7,9,13,17,19-21,23-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999,8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="vulnerability-lookup" output="&#xa;  cpe:2.3:a:openbsd:openssh:10.0:p2: &#xa;    &#x9;CVE-2024-6387&#x9;8.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-6387&#xa;    &#x9;CVE-2025-26465&#x9;6.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26465&#xa;    &#x9;CVE-2025-26466&#x9;5.9&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26466&#xa;    &#x9;CVE-2025-32728&#x9;4.3&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-32728&#xa;    &#x9;CVE-2025-61985&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61985&#xa;    &#x9;CVE-2025-61984&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61984&#xa;    &#x9;CVE-2023-51767&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51767&#xa;    &#x9;CVE-2023-51385&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51385&#xa;    &#x9;CVE-2023-48795&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-48795&#xa;    &#x9;CVE-2023-38408&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-38408&#xa;    &#x9;CVE-2023-28531&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-28531&#xa;    &#x9;CVE-2019-16905&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2019-16905&#xa;    &#x9;CVE-2016-10009&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-10009&#xa;    &#x9;CVE-2003-1562&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2003-1562&#xa;    &#x9;CVE-2001-1585&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1585&#xa;    &#x9;CVE-2001-1507&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1507&#xa;    &#x9;CVE-2001-1459&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1459&#xa;    &#x9;CVE-2001-1382&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1382&#xa;    &#x9;CVE-2001-1380&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1380&#xa;    &#x9;CVE-2001-1029&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1029&#xa;    &#x9;CVE-2001-0872&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0872&#xa;    &#x9;CVE-2001-0816&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0816&#xa;    &#x9;CVE-2001-0572&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0572&#xa;    &#x9;CVE-2001-0529&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0529&#xa;    &#x9;CVE-2000-1169&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-1169&#xa;    &#x9;CVE-2000-0999&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0999&#xa;    &#x9;CVE-2000-0992&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0992&#xa;    &#x9;CVE-2000-0525&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0525&#xa;    &#x9;CVE-2000-0217&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0217&#xa;    &#x9;CVE-2000-0143&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0143&#xa;  cpe:2.3:o:linux:linux_kernel: &#xa;    &#x9;CVE-2023-5178&#x9;8.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5178&#xa;    &#x9;CVE-2023-39191&#x9;8.2&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39191&#xa;    &#x9;CVE-2024-0562&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0562&#xa;    &#x9;CVE-2023-4004&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4004&#xa;    &#x9;CVE-2023-6610&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6610&#xa;    &#x9;CVE-2023-6606&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6606&#xa;    &#x9;CVE-2023-42753&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42753&#xa;    &#x9;CVE-2023-3640&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3640&#xa;    &#x9;CVE-2023-39192&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39192&#xa;    &#x9;CVE-2023-33952&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33952&#xa;    &#x9;CVE-2023-33951&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33951&#xa;    &#x9;CVE-2023-6536&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6536&#xa;    &#x9;CVE-2023-6535&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6535&#xa;    &#x9;CVE-2023-6356&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6356&#xa;    &#x9;CVE-2023-6240&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6240&#xa;    &#x9;CVE-2023-42755&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42755&#xa;    &#x9;CVE-2023-5090&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5090&#xa;    &#x9;CVE-2023-4273&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4273&#xa;    &#x9;CVE-2024-1151&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-1151&#xa;    &#x9;CVE-2024-0443&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0443&#xa;    &#x9;CVE-2023-4459&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4459&#xa;    &#x9;CVE-2023-4194&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4194&#xa;    &#x9;CVE-2023-4132&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4132&#xa;    &#x9;CVE-2023-3773&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3773&#xa;    &#x9;CVE-2023-3772&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3772&#xa;    &#x9;CVE-2025-4598&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-4598&#xa;    &#x9;CVE-2023-4732&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4732&#xa;    &#x9;CVE-2024-0340&#x9;4.4&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0340&#xa;    &#x9;CVE-2021-33624&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-33624&#xa;    &#x9;CVE-2016-4117&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-4117"><table key="cpe:2.3:a:openbsd:openssh:10.0:p2">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-6387</elem>
+<elem key="cvss">8.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26465</elem>
+<elem key="cvss">6.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26466</elem>
+<elem key="cvss">5.9</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-32728</elem>
+<elem key="cvss">4.3</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61985</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61984</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51767</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51385</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-48795</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-38408</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-28531</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2019-16905</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-10009</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2003-1562</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1585</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1507</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1459</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1382</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1380</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1029</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0872</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0816</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0572</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0529</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-1169</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0999</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0992</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0525</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0217</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0143</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+<table key="cpe:2.3:o:linux:linux_kernel">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5178</elem>
+<elem key="cvss">8.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39191</elem>
+<elem key="cvss">8.2</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0562</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4004</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6610</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6606</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42753</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3640</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39192</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33952</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33951</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6536</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6535</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6356</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6240</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42755</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5090</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4273</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-1151</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0443</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4459</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4194</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4132</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3773</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3772</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-4598</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4732</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0340</elem>
+<elem key="cvss">4.4</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-33624</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-4117</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Golang net/http server" servicefp="SF-Port8000-TCP:V=7.95%I=7%D=11/23%Time=6923027A%P=aarch64-unknown-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,430,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x20864\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Thu,\x2007\x20Aug\x202025\x2003:16:48\x20GMT\r\nVary:\x20Accept-Encoding\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index\.839b87b9\.js\&quot;&gt;&lt;/script&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href&quot;)%r(FourOhFourRequest,430,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x20864\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Thu,\x2007\x20Aug\x202025\x2003:16:48\x20GMT\r\nVary:\x20Accept-Encoding\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index\.839b87b9\.js\&quot;&gt;&lt;/script&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href&quot;);" method="probed" conf="10"><cpe>cpe:/a:golang:go</cpe></service><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Content-Length: 864&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Thu, 07 Aug 2025 03:16:48 GMT&#xa;    Vary: Accept-Encoding&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index.839b87b9.js&quot;&gt;&lt;/script&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request"><elem key="FourOhFourRequest, GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Content-Length: 864&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Thu, 07 Aug 2025 03:16:48 GMT&#xa;    Vary: Accept-Encoding&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index.839b87b9.js&quot;&gt;&lt;/script&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href</elem>
+<elem key="GenericLines">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+</script></port>
+<port protocol="tcp" portid="8001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="31401"/>
+<osmatch name="Linux 5.0 - 5.14" accuracy="100" line="71713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)" accuracy="100" line="91792">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="7.X" accuracy="100"><cpe>cpe:/o:mikrotik:routeros:7</cpe></osclass>
+<osclass type="router" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5.6.3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2370798" lastboot="Mon Oct 27 02:17:08 2025"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="6809B8CF,F1DF7077,FF1AA8DF,29B2069F,CDC65C94,E306C657"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="8D4F37D2,8D4F3838,8D4F389D,8D4F3901,8D4F3966,8D4F39CA"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="172.17.0.1" rtt="0.02"/>
+<hop ttl="2" ipaddr="192.168.2.225" rtt="0.55"/>
+</trace>
+<times srtt="594" rttvar="60" to="100000"/>
+</host>
+<host starttime="1763902059" endtime="1763902225"><status state="up" reason="echo-reply" reason_ttl="64"/>
+<address addr="192.168.2.227" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="997">
+<extrareasons reason="conn-refused" count="997" proto="tcp" ports="1,3-4,6-7,9,13,17,19-21,23-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999,8001,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="vulnerability-lookup" output="&#xa;  cpe:2.3:a:openbsd:openssh:10.0:p2: &#xa;    &#x9;CVE-2024-6387&#x9;8.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-6387&#xa;    &#x9;CVE-2025-26465&#x9;6.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26465&#xa;    &#x9;CVE-2025-26466&#x9;5.9&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-26466&#xa;    &#x9;CVE-2025-32728&#x9;4.3&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-32728&#xa;    &#x9;CVE-2025-61985&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61985&#xa;    &#x9;CVE-2025-61984&#x9;3.6&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-61984&#xa;    &#x9;CVE-2023-51767&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51767&#xa;    &#x9;CVE-2023-51385&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-51385&#xa;    &#x9;CVE-2023-48795&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-48795&#xa;    &#x9;CVE-2023-38408&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-38408&#xa;    &#x9;CVE-2023-28531&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-28531&#xa;    &#x9;CVE-2019-16905&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2019-16905&#xa;    &#x9;CVE-2016-10009&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-10009&#xa;    &#x9;CVE-2003-1562&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2003-1562&#xa;    &#x9;CVE-2001-1585&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1585&#xa;    &#x9;CVE-2001-1507&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1507&#xa;    &#x9;CVE-2001-1459&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1459&#xa;    &#x9;CVE-2001-1382&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1382&#xa;    &#x9;CVE-2001-1380&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1380&#xa;    &#x9;CVE-2001-1029&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-1029&#xa;    &#x9;CVE-2001-0872&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0872&#xa;    &#x9;CVE-2001-0816&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0816&#xa;    &#x9;CVE-2001-0572&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0572&#xa;    &#x9;CVE-2001-0529&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2001-0529&#xa;    &#x9;CVE-2000-1169&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-1169&#xa;    &#x9;CVE-2000-0999&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0999&#xa;    &#x9;CVE-2000-0992&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0992&#xa;    &#x9;CVE-2000-0525&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0525&#xa;    &#x9;CVE-2000-0217&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0217&#xa;    &#x9;CVE-2000-0143&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2000-0143&#xa;  cpe:2.3:o:linux:linux_kernel: &#xa;    &#x9;CVE-2023-5178&#x9;8.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5178&#xa;    &#x9;CVE-2023-39191&#x9;8.2&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39191&#xa;    &#x9;CVE-2024-0562&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0562&#xa;    &#x9;CVE-2023-4004&#x9;7.8&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4004&#xa;    &#x9;CVE-2023-6610&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6610&#xa;    &#x9;CVE-2023-6606&#x9;7.1&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6606&#xa;    &#x9;CVE-2023-42753&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42753&#xa;    &#x9;CVE-2023-3640&#x9;7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3640&#xa;    &#x9;CVE-2023-39192&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-39192&#xa;    &#x9;CVE-2023-33952&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33952&#xa;    &#x9;CVE-2023-33951&#x9;6.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-33951&#xa;    &#x9;CVE-2023-6536&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6536&#xa;    &#x9;CVE-2023-6535&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6535&#xa;    &#x9;CVE-2023-6356&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6356&#xa;    &#x9;CVE-2023-6240&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-6240&#xa;    &#x9;CVE-2023-42755&#x9;6.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-42755&#xa;    &#x9;CVE-2023-5090&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-5090&#xa;    &#x9;CVE-2023-4273&#x9;6&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4273&#xa;    &#x9;CVE-2024-1151&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-1151&#xa;    &#x9;CVE-2024-0443&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0443&#xa;    &#x9;CVE-2023-4459&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4459&#xa;    &#x9;CVE-2023-4194&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4194&#xa;    &#x9;CVE-2023-4132&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4132&#xa;    &#x9;CVE-2023-3773&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3773&#xa;    &#x9;CVE-2023-3772&#x9;5.5&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-3772&#xa;    &#x9;CVE-2025-4598&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2025-4598&#xa;    &#x9;CVE-2023-4732&#x9;4.7&#x9;https://vulnerability.circl.lu/vuln/CVE-2023-4732&#xa;    &#x9;CVE-2024-0340&#x9;4.4&#x9;https://vulnerability.circl.lu/vuln/CVE-2024-0340&#xa;    &#x9;CVE-2021-33624&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2021-33624&#xa;    &#x9;CVE-2016-4117&#x9;0&#x9;https://vulnerability.circl.lu/vuln/CVE-2016-4117"><table key="cpe:2.3:a:openbsd:openssh:10.0:p2">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-6387</elem>
+<elem key="cvss">8.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26465</elem>
+<elem key="cvss">6.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-26466</elem>
+<elem key="cvss">5.9</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-32728</elem>
+<elem key="cvss">4.3</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61985</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-61984</elem>
+<elem key="cvss">3.6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51767</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-51385</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-48795</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-38408</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-28531</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2019-16905</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-10009</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2003-1562</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1585</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1507</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1459</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1382</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1380</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-1029</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0872</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0816</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0572</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2001-0529</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-1169</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0999</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0992</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0525</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0217</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2000-0143</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+<table key="cpe:2.3:o:linux:linux_kernel">
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5178</elem>
+<elem key="cvss">8.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39191</elem>
+<elem key="cvss">8.2</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0562</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4004</elem>
+<elem key="cvss">7.8</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6610</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6606</elem>
+<elem key="cvss">7.1</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42753</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3640</elem>
+<elem key="cvss">7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-39192</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33952</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-33951</elem>
+<elem key="cvss">6.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6536</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6535</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6356</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-6240</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-42755</elem>
+<elem key="cvss">6.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-5090</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4273</elem>
+<elem key="cvss">6</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-1151</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0443</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4459</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4194</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4132</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3773</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-3772</elem>
+<elem key="cvss">5.5</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2025-4598</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2023-4732</elem>
+<elem key="cvss">4.7</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2024-0340</elem>
+<elem key="cvss">4.4</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2021-33624</elem>
+<elem key="cvss">0</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">CVE_RECORD</elem>
+<elem key="id">CVE-2016-4117</elem>
+<elem key="cvss">0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Golang net/http server" servicefp="SF-Port8000-TCP:V=7.95%I=7%D=11/23%Time=6923027A%P=aarch64-unknown-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,456,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-age=3600,\x20must-revalidate\r\nContent-Length:\x20871\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Fri,\x2014\x20Nov\x202025\x2005:44:43\x20GMT\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index-Cp21wY1_\.js\&quot;&gt;&lt;/script&gt;\n&quot;)%r(FourOhFourRequest,456,&quot;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-age=3600,\x20must-revalidate\r\nContent-Length:\x20871\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Fri,\x2014\x20Nov\x202025\x2005:44:43\x20GMT\r\nDate:\x20Sun,\x2023\x20Nov\x202025\x2012:47:54\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;icon\&quot;\x20href=\&quot;/photoview-logo\.svg\&quot;\x20type=\&quot;image/svg\+xml\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;apple-touch-icon\&quot;\x20href=\&quot;/logo192\.png\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;theme-color\&quot;\x20content=\&quot;#000000\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-title\&quot;\x20content=\&quot;Photoview\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\x20name=\&quot;apple-mobile-web-app-status-bar-style\&quot;\x20content=\&quot;white\&quot;\x20/&gt;\n\n\x20\x20\x20\x20&lt;script\x20type=\&quot;module\&quot;\x20crossorigin\x20src=\&quot;/assets/index-Cp21wY1_\.js\&quot;&gt;&lt;/script&gt;\n&quot;);" method="probed" conf="10"><cpe>cpe:/a:golang:go</cpe></service><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Cache-Control: public, max-age=3600, must-revalidate&#xa;    Content-Length: 871&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Fri, 14 Nov 2025 05:44:43 GMT&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index-Cp21wY1_.js&quot;&gt;&lt;/script&gt;&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request"><elem key="FourOhFourRequest, GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Accept-Ranges: bytes&#xa;    Cache-Control: public, max-age=3600, must-revalidate&#xa;    Content-Length: 871&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Last-Modified: Fri, 14 Nov 2025 05:44:43 GMT&#xa;    Date: Sun, 23 Nov 2025 12:47:54 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;link rel=&quot;icon&quot; href=&quot;/photoview-logo.svg&quot; type=&quot;image/svg+xml&quot; /&gt;&#xa;    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/logo192.png&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#xa;    &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Photoview&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;white&quot; /&gt;&#xa;    &lt;script type=&quot;module&quot; crossorigin src=&quot;/assets/index-Cp21wY1_.js&quot;&gt;&lt;/script&gt;</elem>
+<elem key="GenericLines">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+</script></port>
+<port protocol="tcp" portid="8002"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="WSGIServer" version="0.2" extrainfo="Python 3.14.0" method="probed" conf="10"><cpe>cpe:/a:python:wsgiref:0.2</cpe></service><script id="http-server-header" output="WSGIServer/0.2 CPython/3.14.0"><elem>WSGIServer/0.2 CPython/3.14.0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42539"/>
+<osmatch name="Linux 4.15 - 5.19" accuracy="100" line="70534">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt 21.02 (Linux 5.4)" accuracy="100" line="72530">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5.4</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)" accuracy="100" line="91792">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="7.X" accuracy="100"><cpe>cpe:/o:mikrotik:routeros:7</cpe></osclass>
+<osclass type="router" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5.6.3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2291114" lastboot="Tue Oct 28 00:25:12 2025"/>
+<distance value="1"/>
+<tcpsequence index="261" difficulty="Good luck!" values="63B29FE7,4ECB1B48,FC4DD28F,82AE930D,D4BD5C67,FBC673FD"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="888F5828,888F588D,888F58F2,888F5956,888F59BB,888F5A20"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="192.168.2.227" rtt="0.04"/>
+</trace>
+<times srtt="115" rttvar="170" to="100000"/>
+</host>
+<runstats><finished time="1763902226" timestr="Sun Nov 23 12:50:26 2025" summary="Nmap done at Sun Nov 23 12:50:26 2025; 256 IP addresses (7 hosts up) scanned in 171.99 seconds" elapsed="171.99" exit="success"/><hosts up="7" down="249" total="256"/>
+</runstats>
+</nmaprun>

@@ -14,9 +14,6 @@ A Web Dashbord for Nmap XML Report
 - [RESTful API](#restful-api)
 - [Third Parts](#third-parts)
 - [Security Issues](#security-issues)
-- [Contributors](#contributors)
-- [Contacts](#contacts)
-
 
 ## Screenshot
 <img src="https://i.imgur.com/ELZfqd0.png" /><br>
@@ -272,6 +269,7 @@ curl -v 'http://localhost:8000/api/v1/scan/hackthebox.xml/10.10.10.87?token=<tok
 - [Chart.js](https://www.chartjs.org)
 - [Wkhtmltopdf](https://wkhtmltopdf.org)
 - [API cve.circl.lu](https://cve.circl.lu)
+- [nmap vulnerability-löökup script](https://github.com/vulnerability-lookup/vulnerability-lookup)
 - [vis.js](http://visjs.org/)
 
 ## Security Issues
@@ -279,11 +277,4 @@ This app is not intended to be exposed to the internet, but to be used as localh
 in case you can't do it, take care to filter who and what can access to WebMap with a firewall rule or something like that. 
 Exposing this app to the whole internet could lead not only to a stored XSS but also to a leakage of sensitive/critical/private 
 informations about your port scan. Please, be smart.
-
-## Contributors
-- [Sabyasachi Rana](https://github.com/SabyasachiRana)
-- [Tristan BRINGUIER](https://github.com/tbringuier)
-- [Ahmed Anwar](https://github.com/AA-Hamza^)
-- [Djozeppe](https://github.com/djozeppe)
-- [LoiusCypher](https://github.com/LoiusCypher)
 

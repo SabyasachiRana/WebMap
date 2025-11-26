@@ -2,7 +2,9 @@ name: Docker Image Release Build
 
 on:
   push:
-    branches: [ "latest", "release*" ]
+    #branches: [ "latest", "release*" ]
+    tags:
+      - 'v*.*.*'
 
 env:
   # setting this in Settings/Secrets and Variables/Actions/Repository variables improves usability in forks
@@ -23,6 +25,8 @@ jobs:
       -
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.ref }}
+          fetch-depth: 1
           fetch-tags: 'true'
       -
         name: Login to Docker Container Hub
@@ -46,6 +50,7 @@ jobs:
           tags: |
             # only push for now event on selected branches
             type=ref,event=branch
+            type=ref,event=tag
           images: |
             loiusc/webmap
             ghcr.io/${{ github.repository }}
@@ -75,4 +80,15 @@ jobs:
           push-to-registry: ${{ env.IS_PUSHING_IMAGES }}
           subject-name: ghcr.io/${{ github.repository }}
           subject-digest: ${{ steps.push.outputs.digest }}
+      -
+        name: push README to Dockerhub
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_USER: ${{ vars.DOCKERUSER }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB }}
+        with:
+          destination_container_repo: loiusc/webmap
+          provider: dockerhub
+          short_description: 'WebMap - Nmap Web Dashboard and Reporting'
+          readme_file: 'README.md'
 
