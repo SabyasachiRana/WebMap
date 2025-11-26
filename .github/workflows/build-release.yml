@@ -35,13 +35,13 @@ jobs:
           registry: 'docker.io'
           username: ${{ env.DOCKERUSER }}
           password: ${{ secrets.DOCKERHUB }}
-      -
-        name: Login to GitHub container registry
-        uses: docker/login-action@v3
-        with:
-          registry: 'ghcr.io'
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+      #-
+      #  name: Login to GitHub container registry
+      ##  uses: docker/login-action@v3
+      #  with:
+      #    registry: 'ghcr.io'
+      #    username: ${{ github.actor }}
+      #    password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -49,11 +49,11 @@ jobs:
         with:
           tags: |
             # only push for now event on selected branches
-            type=ref,event=branch
+            #type=ref,event=branch
             type=ref,event=tag
           images: |
             loiusc/webmap
-            ghcr.io/${{ github.repository }}
+            #ghcr.io/${{ github.repository }}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -78,7 +78,7 @@ jobs:
         uses: actions/attest-build-provenance@v3
         with:
           push-to-registry: ${{ env.IS_PUSHING_IMAGES }}
-          subject-name: ghcr.io/${{ github.repository }}
+          #subject-name: ghcr.io/${{ github.repository }}
           subject-digest: ${{ steps.push.outputs.digest }}
       -
         name: push README to Dockerhub
