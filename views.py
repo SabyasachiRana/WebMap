@@ -4,6 +4,7 @@ import xmltodict, json, html, os, hashlib, re, urllib.parse, base64
 from collections import OrderedDict
 from nmapreport.functions import *
 
+
 def login(request):
 	r = {}
 
@@ -28,11 +29,75 @@ def setscanfile(request, scanfile):
 		if 'scanfile' in request.session:
 			del(request.session['scanfile'])
 
-	return render(request, 'nmapreport/nmap_hostdetails.html', { 'js': '<script> location.href="/"; </script>' })
+	return render(request, 'nmapreport/nmap_hostdetails.html', {'js': '<script> location.href="/"; </script>'})
 
 
 def port(request, port):
-	return render(request, 'nmapreport/index.html', { 'out': '', 'table': '', 'scaninfo': '', 'scandetails': '', 'trhost': '' })
+	return render(request, 'nmapreport/index.html', {'out': '', 'table': '', 'scaninfo': '', 'scandetails': '', 'trhost': ''})
+
+
+def getCveOut(cvejson):
+	cveout = ''
+	cveids = {}
+
+	# print('cvejson:', json.dumps(cvejson, indent=4))
+	if type(cvejson) is list:
+		for i in cvejson:
+			if type(i) is list:
+				listcve = i
+				# cveout += 'list<hr>'
+			elif type(i) is dict:
+				listcve = [i]
+				# cveout += 'dict<hr>'
+			# continue
+
+			for cveobj in listcve:
+				cverefout = ''
+				# print('cveobj:', cveobj)
+				if 'references' in cveobj and type(cveobj['references']) is list:
+					for cveref in cveobj['references']:
+						cverefout += '<a href="' + cveref + '">' + cveref + '</a><br>'
+				if 'containers' in cveobj and 'cna' in cveobj['containers'] and 'references' in cveobj['containers']['cna'] and type(cveobj['containers']['cna']['references']) is list:
+					for cveref in cveobj['containers']['cna']['references']:
+						if 'url' in cveref:
+							if 'name' in cveref:
+								cverefout += '<a href="' + cveref['url'] + '">' + cveref['name'] + '</a><br>'
+							else:
+								cverefout += '<a href="' + cveref['url'] + '">' + cveref['url'] + '</a><br>'
+
+				cveexdbout = ''
+				if 'exploit-db' in cveobj:
+					cveexdbout = '<br><div class="small" style="line-height:20px;"><b>Exploit DB:</b><br>'
+					for cveexdb in cveobj['exploit-db']:
+						if 'title' in cveexdb:
+							cveexdbout += '<a href="' + cveexdb['source'] + '">' + html.escape(cveexdb['title']) + '</a><br>'
+					cveexdbout += '</div>'
+
+				# print('cveobj ', json.dumps(cveobj, indent=4))
+				if 'id' in cveobj and 'summary' in cveobj:
+					cveout += '<div id="' + html.escape(cveobj['id']) + '" style="line-height:28px;padding:10px;border-bottom:solid #666 1px;margin-top:10px;">' + \
+						'	<span class="label red">' + html.escape(cveobj['id']) + '</span> ' + html.escape(cveobj['summary']) + '<br><br>' + \
+						'	<div class="small" style="line-height:20px;"><b>References:</b><br>' + cverefout + '</div>' + \
+						cveexdbout + \
+						'</div>'
+					cveids[cveobj['id']] = cveobj['id']
+				if 'cveMetadata' in cveobj and 'cveId' in cveobj['cveMetadata']:
+					cveout += '<div id="' + html.escape(cveobj['cveMetadata']['cveId']) + \
+						'" style="line-height:28px;padding:10px;border-bottom:solid #666 1px;margin-top:10px;">' + \
+						'	<span class="label red">' + html.escape(cveobj['cveMetadata']['cveId']) + '</span> '
+					if 'containers' in cveobj and 'cna' in cveobj['containers'] and 'descriptions' in cveobj['containers']['cna'] and type(cveobj['containers']['cna']['descriptions']) is list:
+						cvetext = ''
+						for cvedesc in cveobj['containers']['cna']['descriptions']:
+							if 'value' in cvedesc:
+								if 'lang' in cvedesc and 'en' == cvedesc['lang'] or cvetext == '':
+									cvetext = cvedesc['value']
+						cveout += html.escape(cvetext) + '<br><br>'
+					cveout += '	<div class="small" style="line-height:20px;"><b>References:</b><br>' + cverefout + '</div>' + \
+						cveexdbout + \
+						'</div>'
+					cveids[cveobj['cveMetadata']['cveId']] = cveobj['cveMetadata']['cveId']
+	return cveids, cveout
+
 
 def details(request, address):
 	r = {}
@@ -57,7 +122,7 @@ def details(request, address):
 	labelhost = {}
 	labelfiles = os.listdir('/opt/notes')
 	for lf in labelfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.host\.label$', lf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.host\.label$', lf)
 		if m is not None:
 			if m.group(1) not in labelhost:
 				labelhost[m.group(1)] = {}
@@ -67,7 +132,7 @@ def details(request, address):
 	noteshost = {}
 	notesfiles = os.listdir('/opt/notes')
 	for nf in notesfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.notes$', nf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.notes$', nf)
 		if m is not None:
 			if m.group(1) not in noteshost:
 				noteshost[m.group(1)] = {}
@@ -111,8 +176,8 @@ def details(request, address):
 			r['hostname'] = hostname
 
 			scantitle = request.session['scanfile'].replace('.xml','').replace('_',' ')
-			if re.search('^webmapsched\_[0-9\.]+', request.session['scanfile']):
-				m = re.search('^webmapsched\_[0-9\.]+\_(.+)', request.session['scanfile'])
+			if re.search(r'^webmapsched\_[0-9\.]+', request.session['scanfile']):
+				m = re.search(r'^webmapsched\_[0-9\.]+\_(.+)', request.session['scanfile'])
 				scantitle = m.group(1).replace('.xml','').replace('_',' ')
 			r['scanfile'] = scantitle
 
@@ -191,7 +256,7 @@ def details(request, address):
 						servicename = p['service']['@name']
 					else:
 						servicename = ''
-							
+
 					r['tr'][p['@portid']] = {
 						'service': servicename,
 						'protocol': p['@protocol'],
@@ -275,37 +340,7 @@ def details(request, address):
 	if scanmd5 in cvehost:
 		if addressmd5 in cvehost[scanmd5]:
 			cvejson = json.loads(cvehost[scanmd5][addressmd5])
-			cveids = {}
-
-			for i in cvejson:
-				if type(i) is list:
-					listcve = i
-					#cveout += 'list<hr>'
-				elif type(i) is dict:
-					listcve = [i]
-					#cveout += 'dict<hr>'
-				#continue
-
-				for cveobj in listcve:
-					cverefout = ''
-					for cveref in cveobj['references']:
-						cverefout += '<a href="'+cveref+'">'+cveref+'</a><br>'
-
-					cveexdbout = ''
-					if 'exploit-db' in cveobj:
-						cveexdbout = '<br><div class="small" style="line-height:20px;"><b>Exploit DB:</b><br>'
-						for cveexdb in cveobj['exploit-db']:
-							if 'title' in cveexdb:
-								cveexdbout += '<a href="'+cveexdb['source']+'">'+html.escape(cveexdb['title'])+'</a><br>'
-						cveexdbout += '</div>'
-
-					cveout += '<div id="'+html.escape(cveobj['id'])+'" style="line-height:28px;padding:10px;border-bottom:solid #666 1px;margin-top:10px;">'+\
-					'	<span class="label red">'+html.escape(cveobj['id'])+'</span> '+html.escape(cveobj['summary'])+'<br><br>'+\
-					'	<div class="small" style="line-height:20px;"><b>References:</b><br>'+cverefout+'</div>'+\
-					cveexdbout+\
-					'</div>'
-					cveids[cveobj['id']] = cveobj['id']
-				
+			cveids, cveout = getCveOut(cvejson)
 			r['cveids'] = cveids
 			r['cvelist'] = cveout
 
@@ -349,7 +384,7 @@ def index(request, filterservice="", filterportid=""):
 
 		xmlfilescount = 0
 		for i in xmlfiles:
-			if re.search('\.xml$', i) is None:
+			if re.search(r'\.xml$', i) is None:
 				continue
 
 			#portstats = {}
@@ -378,8 +413,8 @@ def index(request, filterservice="", filterportid=""):
 				viewhref = '#!'
 
 			filename = i
-			if re.search('^webmapsched\_[0-9\.]+',i):
-				m = re.search('^webmapsched\_([0-9\.]+)\_(.+)',i)
+			if re.search(r'^webmapsched\_[0-9\.]+',i):
+				m = re.search(r'^webmapsched\_([0-9\.]+)\_(.+)',i)
 				filename = '<i class="fas fa-calendar-alt grey-text"></i> '+html.escape(m.group(2))
 
 			portstats = nmap_ports_stats(i)
@@ -410,7 +445,7 @@ def index(request, filterservice="", filterportid=""):
 	labelhost = {}
 	labelfiles = os.listdir('/opt/notes')
 	for lf in labelfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.host\.label$', lf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.host\.label$', lf)
 		if m is not None:
 			if m.group(1) not in labelhost:
 				labelhost[m.group(1)] = {}
@@ -420,7 +455,7 @@ def index(request, filterservice="", filterportid=""):
 	noteshost = {}
 	notesfiles = os.listdir('/opt/notes')
 	for nf in notesfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.notes$', nf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.notes$', nf)
 		if m is not None:
 			if m.group(1) not in noteshost:
 				noteshost[m.group(1)] = {}
@@ -522,7 +557,6 @@ def index(request, filterservice="", filterportid=""):
 								cpe[address][cpei] = cpei
 						else:
 							cpe[address][p['service']['cpe']] = p['service']['cpe']
-		
 
 					if '@ostype' in p['service']:
 						if p['service']['@ostype'] in allostypelist:
@@ -541,7 +575,7 @@ def index(request, filterservice="", filterportid=""):
 					picount[p['@portid']] = (picount[p['@portid']] + 1)
 				else:
 					picount[p['@portid']] = 1
-					
+
 				if p['state']['@state'] == 'closed':
 					ports['closed'] = (ports['closed'] + 1)
 					pc = (pc + 1)
@@ -622,8 +656,8 @@ def index(request, filterservice="", filterportid=""):
 				tags = []
 				extrainfosplit = e.split(' ')
 				for eis in extrainfosplit:
-					if re.search('[a-zA-Z0-9\_]+\/[0-9\.]+', eis) is not None:
-						robj = re.search('([a-zA-Z0-9\_]+)\/([0-9\.]+)', eis)
+					if re.search(r'[a-zA-Z0-9\_]+\/[0-9\.]+', eis) is not None:
+						robj = re.search(r'([a-zA-Z0-9\_]+)\/([0-9\.]+)', eis)
 						tags.append(robj.group(1)+' '+robj.group(2))
 
 

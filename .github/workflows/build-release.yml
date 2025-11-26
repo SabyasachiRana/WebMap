@@ -1,0 +1,87 @@
+name: Docker Image Release Build
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+env:
+  # setting this in Settings/Secrets and Variables/Actions/Repository variables improves usability in forks
+  DOCKERUSER: ${{ vars.DOCKERUSER }}
+  IS_PUSHING_IMAGES: true
+ 
+jobs:
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+      attestations: write
+      id-token: write
+
+    steps:
+      -
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 1
+          fetch-tags: 'true'
+      -
+        name: Login to Docker Container Hub
+        uses: docker/login-action@v3
+        with:
+          registry: 'docker.io'
+          username: ${{ env.DOCKERUSER }}
+          password: ${{ secrets.DOCKERHUB }}
+      -
+        name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          tags: |
+            # only push for now event on selected branches
+            type=ref,event=tag
+          images: |
+            loiusc/webmap
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      -
+        name: Build and push Docker images
+        id: push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ env.IS_PUSHING_IMAGES }}
+          platforms: amd64,arm64
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          file: docker/Dockerfile
+      -
+        name: Generate artifact attestation
+        id: attest
+        if: ${{ env.IS_PUSHING_IMAGES }}
+        uses: actions/attest-build-provenance@v3
+        with:
+          push-to-registry: ${{ env.IS_PUSHING_IMAGES }}
+          subject-name: docker.io/loiusc/webmap
+          subject-digest: ${{ steps.push.outputs.digest }}
+          predicate-type: 'https://in-toto.io/attestation/release/v0.1'
+          predicate: '{"purl":"pkg:oci/..."}'
+      -
+        name: push README to Dockerhub
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_USER: ${{ vars.DOCKERUSER }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB }}
+        with:
+          destination_container_repo: loiusc/webmap
+          provider: dockerhub
+          short_description: 'WebMap - Nmap Web Dashboard and Reporting'
+          readme_file: 'README.md'
+
+

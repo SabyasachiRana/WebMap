@@ -14,9 +14,6 @@ A Web Dashbord for Nmap XML Report
 - [RESTful API](#restful-api)
 - [Third Parts](#third-parts)
 - [Security Issues](#security-issues)
-- [Contributors](#contributors)
-- [Contacts](#contacts)
-
 
 ## Screenshot
 <img src="https://i.imgur.com/ELZfqd0.png" /><br>
@@ -27,16 +24,18 @@ A Web Dashbord for Nmap XML Report
 ## Usage
 You should use this with docker, just by sending this command:
 ```bash
-$ mkdir /tmp/webmap
+$ mkdir -p _container/xml _container/notes _container/notes
 $ docker run -d \
          --name webmap \
          -h webmap \
          -p 8000:8000 \
-         -v /tmp/webmap:/opt/xml \
-         reborntc/webmap
+         -v ./_container/xml:/opt/xml \
+         -v ./_container/notes:/opt/notes \
+         -v ./_container/schedule:/opt/schedule \
+         loiusc/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
-$ nmap -sT -A -T4 -oX /tmp/webmap/myscan.xml 192.168.1.0/24
+$ docker exec -ti webmap nmap -sT -A -T4 -oX /opt/xml/myscan.xml 192.168.1.0/24
 ```
 Now point your browser to http://localhost:8000
 
@@ -55,15 +54,15 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull reborntc/webmap
-
-$ # run WebMap
-$ curl -sL http://bit.ly/webmapsetup | bash
+$ docker pull loiusc/webmap
 ```
+
+The mapped docker volumes make sure that scans, notes, labels and schedules will persist.
+As a workaround host folder .../schedule gives access to manually delete (or modify) scan schedules.
 
 ### Run without Docker
 This project is designed to run on a Docker container. IMHO it isn't a good idea to run this on a custom Django installation, 
-but if you need it you can find all building steps inside the [Dockerfile](https://github.com/SabyasachiRana/WebMap/blob/master/docker/Dockerfile).
+but if you need it you can find all building steps inside the [Dockerfile](https://github.com/LoiusCypher/WebMap/blob/master/docker/Dockerfile).
 
 ## Video
 The HTML template changes often. This video could not be up to date with the latest version.
@@ -270,6 +269,7 @@ curl -v 'http://localhost:8000/api/v1/scan/hackthebox.xml/10.10.10.87?token=<tok
 - [Chart.js](https://www.chartjs.org)
 - [Wkhtmltopdf](https://wkhtmltopdf.org)
 - [API cve.circl.lu](https://cve.circl.lu)
+- [nmap vulnerability-löökup script](https://github.com/vulnerability-lookup/vulnerability-lookup)
 - [vis.js](http://visjs.org/)
 
 ## Security Issues

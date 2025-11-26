@@ -113,7 +113,7 @@ def get_cve(scanmd5):
 	cvehost = {}
 	cvefiles = os.listdir('/opt/notes')
 	for cf in cvefiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.cve$', cf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.cve$', cf)
 		if m is not None:
 			if m.group(1) not in cvehost:
 				cvehost[m.group(1)] = {}
@@ -138,7 +138,7 @@ def get_ports_details(scanfile):
 	labelhost = {}
 	labelfiles = os.listdir('/opt/notes')
 	for lf in labelfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.host\.label$', lf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.host\.label$', lf)
 		if m is not None:
 			if m.group(1) not in labelhost:
 				labelhost[m.group(1)] = {}
@@ -148,7 +148,7 @@ def get_ports_details(scanfile):
 	noteshost = {}
 	notesfiles = os.listdir('/opt/notes')
 	for nf in notesfiles:
-		m = re.match('^('+scanmd5+')_([a-z0-9]{32,32})\.notes$', nf)
+		m = re.match('^('+scanmd5+r')_([a-z0-9]{32,32})\.notes$', nf)
 		if m is not None:
 			if m.group(1) not in noteshost:
 				noteshost[m.group(1)] = {}
