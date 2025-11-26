@@ -79,7 +79,7 @@ jobs:
         with:
           push-to-registry: ${{ env.IS_PUSHING_IMAGES }}
           #subject-name: ghcr.io/${{ github.repository }}
-          subject-name: docker.io/${{ github.repository }}
+          subject-name: docker.io/loiusc/webmap
           subject-digest: ${{ steps.push.outputs.digest }}
       -
         name: push README to Dockerhub
