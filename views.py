@@ -371,8 +371,15 @@ def index(request, filterservice="", filterportid=""):
 	else:
 		r['auth'] = True
 
-	gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
-	r['webmapver'] = 'WebMap '+gitcmd.read()+'<br>This project is currently a beta, please <b>DO NOT</b> expose WebMap to internet.<br>This version is <b>NOT</b> production ready.'
+	# gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
+	try:
+		git_branch = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD 2>/dev/null').read().strip()
+		if not git_branch:
+			git_branch = "Unknown"
+	except Exception:
+		git_branch = "Unknown"
+
+	r['webmapver'] = 'WebMap '+git_branch+'<br>This project is currently a beta, please <b>DO NOT</b> expose WebMap to internet.<br>This version is <b>NOT</b> production ready.'
 
 	if 'scanfile' in request.session:
 		oo = xmltodict.parse(open('/opt/xml/'+request.session['scanfile'], 'r').read())
