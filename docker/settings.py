@@ -20,6 +20,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 #               ^ keep in mind that this app is not designed to be exposed on the internet. Please don't do it.
 
+# CSRF settings for Railway/external deployment
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
+# Clean up empty strings if split results in one
+CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in CSRF_TRUSTED_ORIGINS if origin.strip()]
+
+# If behind a proxy (like Railway), trust the X-Forwarded-Proto header
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Application definition
 
 INSTALLED_APPS = [
