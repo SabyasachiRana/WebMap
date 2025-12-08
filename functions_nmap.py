@@ -59,7 +59,11 @@ def nmap_scaninfo(request):
 
 def nmap_newscan(request):
 	if request.method == "POST":
-		if(re.search(r'^[a-zA-Z0-9\_\-\.]+$', request.POST['filename']) and re.search(r'^[a-zA-Z0-9\-\.\:\=\s,]+$', request.POST['params']) and re.search(r'^[a-zA-Z0-9\-\.\:\/\s]+$', request.POST['target'])):
+		filename = request.POST.get('filename', '').strip()
+		if not filename:
+			filename = 'webmap_scan_' + str(int(time.time())) + '.xml'
+
+		if(re.search(r'^[a-zA-Z0-9\_\-\.]+$', filename) and re.search(r'^[a-zA-Z0-9\-\.\:\=\s,]+$', request.POST['params']) and re.search(r'^[a-zA-Z0-9\-\.\:\/\s]+$', request.POST['target'])):
 			res = {'p':request.POST}
 
 			# Ensure we use absolute path for nmap if possible, or assume it's in PATH.
@@ -77,7 +81,7 @@ def nmap_newscan(request):
 				nmap=nmap_bin,
 				params=request.POST['params'],
 				script_dir=settings.BASE_DIR + '/nmapreport/nmap/nse/',
-				filename=request.POST['filename'],
+				filename=filename,
 				target=request.POST['target']
 			)
 
@@ -88,7 +92,7 @@ def nmap_newscan(request):
 
 			if request.POST['schedule'] == "true":
 				schedobj = {'params':request.POST, 'lastrun':time.time(), 'number':0}
-				filenamemd5 = hashlib.md5(str(request.POST['filename']).encode('utf-8')).hexdigest()
+				filenamemd5 = hashlib.md5(str(filename).encode('utf-8')).hexdigest()
 				writefile = '/opt/schedule/'+filenamemd5+'.json'
 				file = open(writefile, "w")
 				file.write(json.dumps(schedobj, indent=4))
