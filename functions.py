@@ -1,9 +1,19 @@
 import xmltodict, json, html, os, hashlib, re, urllib.parse, base64
 
 def token_check(token):
-	tokenhash = open('/root/token.sha256').read().strip()
-	if tokenhash == hashlib.sha256(token.encode('utf-8')).hexdigest():
-		return True
+	# Check environment variable first
+	env_token = os.environ.get('WEBMAP_TOKEN')
+	if env_token:
+		if env_token == token:
+			return True
+
+	try:
+		tokenhash = open('/root/token.sha256').read().strip()
+		if tokenhash == hashlib.sha256(token.encode('utf-8')).hexdigest():
+			return True
+	except Exception:
+		pass
+
 	return False
 
 def labelToMargin(label):

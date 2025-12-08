@@ -40,8 +40,11 @@ def nmap_newscan(request):
 	if request.method == "POST":
 		if(re.search(r'^[a-zA-Z0-9\_\-\.]+$', request.POST['filename']) and re.search(r'^[a-zA-Z0-9\-\.\:\=\s,]+$', request.POST['params']) and re.search(r'^[a-zA-Z0-9\-\.\:\/\s]+$', request.POST['target'])):
 			res = {'p':request.POST}
-			os.popen('nmap '+request.POST['params']+' --script='+settings.BASE_DIR+'/nmapreport/nmap/nse/ -oX /tmp/'+request.POST['filename']+'.active '+request.POST['target']+' > /dev/null 2>&1 && '+
-			'sleep 10 && mv /tmp/'+request.POST['filename']+'.active /opt/xml/'+request.POST['filename']+' &')
+			# Use parentheses for background execution to ensure logical operators work as expected
+			# Redirect output to a log file instead of /dev/null for debugging
+			cmd = '(nmap ' + request.POST['params'] + ' --script=' + settings.BASE_DIR + '/nmapreport/nmap/nse/ -oX /tmp/' + request.POST['filename'] + '.active ' + request.POST['target'] + ' > /tmp/nmap_scan.log 2>&1 && ' + \
+			'sleep 2 && mv /tmp/' + request.POST['filename'] + '.active /opt/xml/' + request.POST['filename'] + ') &'
+			os.popen(cmd)
 
 			if request.POST['schedule'] == "true":
 				schedobj = {'params':request.POST, 'lastrun':time.time(), 'number':0}
