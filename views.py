@@ -107,6 +107,9 @@ def details(request, address):
 	else:
 		r['auth'] = True
 
+	if 'scanfile' not in request.session:
+		return render(request, 'nmapreport/index.html', {'out': '', 'table': '', 'scaninfo': '', 'scandetails': '', 'trhost': ''})
+
 	oo = xmltodict.parse(open('/opt/xml/'+request.session['scanfile'], 'r').read())
 	r['out2'] = json.dumps(oo['nmaprun'], indent=4)
 	o = json.loads(r['out2'])

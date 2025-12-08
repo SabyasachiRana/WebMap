@@ -1,9 +1,11 @@
 from django.urls import path
+from django.views.generic.base import RedirectView
 from . import views, api, pdf, network, functions_nmap, ndiff
 
 urlpatterns = [
 	path('', views.index, name='index'),
 	path('setscanfile/<scanfile>', views.setscanfile, name='setscanfile'),
+	path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico', permanent=True)),
 	path('<address>/', views.details, name='details'),
 	path('port/<port>/', views.port, name='port'),
 	path('service/<filterservice>/', views.index, name='service'),

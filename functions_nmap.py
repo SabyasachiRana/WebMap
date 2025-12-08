@@ -42,8 +42,10 @@ def nmap_newscan(request):
 			res = {'p':request.POST}
 			# Use parentheses for background execution to ensure logical operators work as expected
 			# Redirect output to a log file instead of /dev/null for debugging
-			cmd = '(nmap ' + request.POST['params'] + ' --script=' + settings.BASE_DIR + '/nmapreport/nmap/nse/ -oX /tmp/' + request.POST['filename'] + '.active ' + request.POST['target'] + ' > /tmp/nmap_scan.log 2>&1 && ' + \
-			'sleep 2 && mv /tmp/' + request.POST['filename'] + '.active /opt/xml/' + request.POST['filename'] + ') &'
+			# Use ; instead of && to ensure the move happens even if nmap returns a warning/error (exit code != 0)
+			# but still produces output (which we know it does because of "finished" tag in .active file)
+			cmd = '(nmap ' + request.POST['params'] + ' --script=' + settings.BASE_DIR + '/nmapreport/nmap/nse/ -oX /tmp/' + request.POST['filename'] + '.active ' + request.POST['target'] + ' > /tmp/nmap_scan.log 2>&1; ' + \
+			'mv /tmp/' + request.POST['filename'] + '.active /opt/xml/' + request.POST['filename'] + ' >> /tmp/nmap_scan.log 2>&1) &'
 			os.popen(cmd)
 
 			if request.POST['schedule'] == "true":
