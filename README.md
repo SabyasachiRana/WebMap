@@ -60,6 +60,12 @@ $ docker pull reborntc/webmap
 The mapped docker volumes make sure that scans, notes, labels and schedules will persist.
 As a workaround host folder .../schedule gives access to manually delete (or modify) scan schedules.
 
+### Build Docker
+```bash
+$ git clone https://github.com/SabyasachiRana/WebMap
+$ cd webmap
+$ docker build -f docker/Dockerfile . -t webmap
+```
 ### Run without Docker
 This project is designed to run on a Docker container. IMHO it isn't a good idea to run this on a custom Django installation, 
 but if you need it you can find all building steps inside the [Dockerfile](https://github.com/SabyasachiRana/WebMap/blob/master/docker/Dockerfile).
