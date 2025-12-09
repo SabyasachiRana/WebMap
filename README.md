@@ -54,7 +54,7 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull loiusc/webmap
+$ docker pull reborntc/webmap
 ```
 
 The mapped docker volumes make sure that scans, notes, labels and schedules will persist.

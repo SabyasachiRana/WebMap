@@ -68,7 +68,7 @@ jobs:
         uses: actions/attest-build-provenance@v3
         with:
           push-to-registry: ${{ env.IS_PUSHING_IMAGES }}
-          subject-name: docker.io/loiusc/webmap
+          subject-name: docker.io/reborntc/webmap
           subject-digest: ${{ steps.push.outputs.digest }}
           predicate-type: 'https://in-toto.io/attestation/release/v0.1'
           predicate: '{"purl":"pkg:oci/..."}'
@@ -79,7 +79,7 @@ jobs:
           DOCKER_USER: ${{ vars.DOCKERUSER }}
           DOCKER_PASS: ${{ secrets.DOCKERHUB }}
         with:
-          destination_container_repo: loiusc/webmap
+          destination_container_repo: reborntc/webmap
           provider: dockerhub
           short_description: 'WebMap - Nmap Web Dashboard and Reporting'
           readme_file: 'README.md'
