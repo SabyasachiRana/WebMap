@@ -12,7 +12,7 @@ ENV WKHTMLTOX_VERSION=0.12.6.1-3
 
 WORKDIR /opt
 
-RUN apt-get update && apt-get install -y libssl3t64 vim nmap
+RUN apt-get update && apt-get install -y libssl3t64 vim nmap wget
 
 RUN echo "Building for ${TARGETPLATFORM} OS: ${TARGETOS} ARCH: ${TARGETARCH} VARIANT: ${TARGETVARIANT}"
 ARG WKHTML_PACK=wkhtmltox_${WKHTMLTOX_VERSION}.bookworm_${TARGETARCH}.deb
