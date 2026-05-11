@@ -192,7 +192,16 @@ def apiv1_hostdetails(request, scanfile, faddress=""):
 	if token_check(request.GET['token']) is not True:
 		return HttpResponse(json.dumps({'error':'invalid token'}, indent=4), content_type="application/json")
 
-	oo = xmltodict.parse(open('/opt/xml/'+scanfile, 'r').read())
+	# Prevent path traversal: only allow safe filenames
+	scanfile = os.path.basename(scanfile)
+	if '..' in scanfile or '/' in scanfile or '\\' in scanfile:
+		return HttpResponse(json.dumps({'error':'invalid scanfile'}, indent=4), content_type="application/json")
+
+	xml_path = os.path.join('/opt/xml/', scanfile)
+	if not os.path.exists(xml_path):
+		return HttpResponse(json.dumps({'error':'file not found'}, indent=4), content_type="application/json")
+
+	oo = xmltodict.parse(open(xml_path, 'r').read())
 	out2 = json.dumps(oo['nmaprun'], indent=4)
 	o = json.loads(out2)
 
