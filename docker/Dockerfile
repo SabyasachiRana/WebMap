@@ -1,22 +1,4 @@
-# WebMap
-# -
-# https://github.com/SabyasachiRana/WebMap
-# Author: SabyasachiRana
-# -
-# Usage:
-#   $ cd /opt
-#   $ git clone https://github.com/SabyasachiRana/WebMap.git
-#   $ cd WebMap/docker
-#   $ docker build -t webmap:latest .
-#   $ docker run -d -v /opt/WebMap/docker/xml:/opt/xml -p 8000:8000 webmap:latest
-#
-# Nmap Example:
-#   $ nmap -sT -A -oX /tmp/myscan.xml 192.168.1.0/24
-#   $ mv /tmp/myscan.xml /opt/WebMap/docker/xml
-#
-# Now you can point your browser to http://localhost:8000
-
-FROM python:3-trixie
+FROM python:3-slim
 
 ARG BUILDPLATFORM TARGETPLATFORM TARGETOS TARGETARCH
 
