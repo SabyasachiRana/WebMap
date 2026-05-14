@@ -40,7 +40,10 @@ jobs:
       - name: Set image tags
         id: image-tags
         run: |
-          IMAGE_REF="ghcr.io/${{ github.repository_owner | lower }}/${{ env.IMAGE_NAME }}"
+          OWNER_LOWER="${{ github.repository_owner }}"
+          OWNER_LOWER="${OWNER_LOWER,,}"
+          echo "OWNER_LOWER=${OWNER_LOWER}" >> "$GITHUB_OUTPUT"
+          IMAGE_REF="ghcr.io/${OWNER_LOWER}/${{ env.IMAGE_NAME }}"
           if [[ "${GITHUB_REF}" == "refs/heads/master" ]]; then
             echo "TAGS=${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
           elif [[ "${GITHUB_REF}" =~ ^refs/tags/(v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
@@ -66,7 +69,7 @@ jobs:
         uses: actions/attest-build-provenance@v3
         with:
           push-to-registry: true
-          subject-name: ghcr.io/${{ github.repository_owner | lower }}/${{ env.IMAGE_NAME }}
+          subject-name: ghcr.io/${{ steps.image-tags.outputs.OWNER_LOWER }}/${{ env.IMAGE_NAME }}
           subject-digest: ${{ steps.push.outputs.digest }}
           predicate-type: "https://in-toto.io/attestation/release/v0.1"
           predicate: '{"purl":"pkg:oci/..."}'
