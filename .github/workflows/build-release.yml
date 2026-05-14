@@ -8,6 +8,9 @@ on:
     tags:
       - 'v*.*.*'
 
+env:
+  IMAGE_NAME: webmap
+
 jobs:
   build:
     name: Build and push Docker image
@@ -39,15 +42,15 @@ jobs:
       - name: Set image tags
         id: image-tags
         run: |
-          IMAGE_NAME="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/webmap"
+          IMAGE_REF="ghcr.io/${{ github.repository_owner | lower }}/${{ env.IMAGE_NAME }}"
           if [[ "${GITHUB_REF}" == "refs/heads/master" ]]; then
-            echo "TAGS=${IMAGE_NAME}:latest" >> "$GITHUB_OUTPUT"
+            echo "TAGS=${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
           elif [[ "${GITHUB_REF}" =~ ^refs/tags/(v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
             VERSION="${BASH_REMATCH[1]}"
-            echo "TAGS=${IMAGE_NAME}:${VERSION},${IMAGE_NAME}:latest" >> "$GITHUB_OUTPUT"
+            echo "TAGS=${IMAGE_REF}:${VERSION},${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
           else
             SHORT_SHA="${GITHUB_SHA:0:8}"
-            echo "TAGS=${IMAGE_NAME}:${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+            echo "TAGS=${IMAGE_REF}:${SHORT_SHA}" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Build and push Docker images
@@ -65,7 +68,7 @@ jobs:
         uses: actions/attest-build-provenance@v3
         with:
           push-to-registry: true
-          subject-name: ghcr.io/${{ lower(github.repository_owner) }}/webmap
+          subject-name: ghcr.io/${{ github.repository_owner | lower }}/${{ env.IMAGE_NAME }}
           subject-digest: ${{ steps.push.outputs.digest }}
           predicate-type: "https://in-toto.io/attestation/release/v0.1"
           predicate: '{"purl":"pkg:oci/..."}'
