@@ -39,8 +39,8 @@ jobs:
       - name: Set image tags
         id: image-tags
         run: |
-          IMAGE_NAME="ghcr.io/${GITHUB_REPOSITORY_OWNER}/webmap"
-          if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
+          IMAGE_NAME="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/webmap"
+          if [[ "${GITHUB_REF}" == "refs/heads/master" ]]; then
             echo "TAGS=${IMAGE_NAME}:latest" >> "$GITHUB_OUTPUT"
           elif [[ "${GITHUB_REF}" =~ ^refs/tags/(v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
             VERSION="${BASH_REMATCH[1]}"
@@ -65,7 +65,7 @@ jobs:
         uses: actions/attest-build-provenance@v3
         with:
           push-to-registry: true
-          subject-name: ghcr.io/${{ github.repository_owner }}/webmap
+          subject-name: ghcr.io/${{ toLower(github.repository_owner) }}/webmap
           subject-digest: ${{ steps.push.outputs.digest }}
           predicate-type: "https://in-toto.io/attestation/release/v0.1"
           predicate: '{"purl":"pkg:oci/..."}'
