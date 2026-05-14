@@ -5,7 +5,14 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
+  - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `Docker` directory
+    directory: "/docker"
+    # Check for updates once a week
     schedule:
       interval: "weekly"
