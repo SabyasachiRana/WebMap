@@ -1,10 +1,7 @@
 name: GitHub Container Registry Build
 
 on:
-  push:
-    branches:
-      - main
-      - master
+  workflow_dispatch:
 
 env:
   IMAGE_NAME: webmap
