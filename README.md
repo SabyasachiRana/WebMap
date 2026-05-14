@@ -54,7 +54,7 @@ $ # remove webmap container
 $ docker rm webmap
 
 $ # pull new image from dockerhub
-$ docker pull reborntc/webmap
+$ docker pull ghcr.io/sabyasachirana/webmap:latest
 ```
 
 The mapped docker volumes make sure that scans, notes, labels and schedules will persist.
