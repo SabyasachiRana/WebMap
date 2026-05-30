@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
-import os, re, json, hashlib, time, shutil, subprocess
+import os, re, json, hashlib, time, shutil, subprocess, threading
 
 def nmap_scaninfo(request):
 	tmpfiles = os.listdir('/tmp/')
@@ -63,7 +63,10 @@ def nmap_newscan(request):
 		if not filename:
 			filename = 'webmap_scan_' + str(int(time.time())) + '.xml'
 
-		if(re.search(r'^[a-zA-Z0-9\_\-\.]+$', filename) and re.search(r'^[a-zA-Z0-9\-\.\:\=\s,]+$', request.POST['params']) and re.search(r'^[a-zA-Z0-9\-\.\:\/\s]+$', request.POST['target'])):
+		params = request.POST['params'].strip()
+		target = request.POST['target'].strip()
+
+		if(re.search(r'^[a-zA-Z0-9\_\-\.]+$', filename) and re.search(r'^[a-zA-Z0-9\-\.\:\=\s,]+$', params) and re.search(r'^[a-zA-Z0-9\-\.\:\/\s]+$', target)):
 			res = {'p':request.POST}
 
 			# Ensure we use absolute path for nmap if possible, or assume it's in PATH.
@@ -73,22 +76,23 @@ def nmap_newscan(request):
 			elif os.path.exists('/usr/local/bin/nmap'):
 				nmap_bin = '/usr/local/bin/nmap'
 
-			# Construct the command
-			# We use subprocess via shell for background execution logic, but cleaner.
-			# Actually, sticking to the shell string with explicit redirects is safer for async execution without hanging.
+			# Build a safe argument list instead of using shell=True.
+			cmd_args = [nmap_bin] + params.split() + ['--script=' + os.path.join(settings.BASE_DIR, 'nmapreport', 'nmap', 'nse', '')] + ['-oX', '/tmp/' + filename + '.active'] + target.split()
+			log_file = '/tmp/nmap_scan.log'
+			active_file = '/tmp/' + filename + '.active'
+			final_file = '/opt/xml/' + filename
 
-			cmd = '({nmap} {params} --script={script_dir} -oX /tmp/{filename}.active {target} > /tmp/nmap_scan.log 2>&1; mv /tmp/{filename}.active /opt/xml/{filename} >> /tmp/nmap_scan.log 2>&1) &'.format(
-				nmap=nmap_bin,
-				params=request.POST['params'],
-				script_dir=settings.BASE_DIR + '/nmapreport/nmap/nse/',
-				filename=filename,
-				target=request.POST['target']
-			)
+			def run_scan_async(args, stdout_path, active_path, dest_path):
+				with open(stdout_path, 'ab') as logfd:
+					proc = subprocess.Popen(args, stdout=logfd, stderr=subprocess.STDOUT)
+					proc.wait()
+				try:
+					shutil.move(active_path, dest_path)
+				except Exception as e:
+					print('Failed to move nmap output file:', e)
 
-			# Log the command to stdout so user can see it in Railway logs
-			print("Executing scan command: " + cmd)
-
-			subprocess.Popen(cmd, shell=True)
+			# Launch the scan in a background thread without shell interpolation.
+			threading.Thread(target=run_scan_async, args=(cmd_args, log_file, active_file, final_file), daemon=True).start()
 
 			if request.POST['schedule'] == "true":
 				schedobj = {'params':request.POST, 'lastrun':time.time(), 'number':0}

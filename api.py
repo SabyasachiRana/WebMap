@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import xmltodict, json, html, os, hashlib, re, requests, base64, urllib.parse
+import xmltodict, json, html, os, hashlib, re, requests, base64, urllib.parse, subprocess
 from collections import OrderedDict
 from nmapreport.functions import *
 
@@ -134,7 +134,17 @@ def genPDF(request):
 		if os.path.exists(pdfpath):
 			os.remove(pdfpath)
 
-		os.popen('wkhtmltopdf --cookie sessionid '+request.session._session_key+' --enable-javascript --javascript-delay 6000 http://127.0.0.1:8000/view/pdf/ '+pdfpath)
+		subprocess.Popen([
+			'wkhtmltopdf',
+			'--cookie',
+			'sessionid',
+			request.session._session_key,
+			'--enable-javascript',
+			'--javascript-delay',
+			'6000',
+			'http://127.0.0.1:8000/view/pdf/',
+			pdfpath
+		], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 		res = {'ok':'PDF created', 'file':'/static/'+pdffile}
 		return HttpResponse(json.dumps(res), content_type="application/json")
 
@@ -146,47 +156,18 @@ def getCVE(request):
 
 	if request.method == "POST":
 		scanfilemd5 = hashlib.md5(str(request.session['scanfile']).encode('utf-8')).hexdigest()
-		cveproc = os.popen('python3 /opt/nmapdashboard/nmapreport/nmap/cve.py '+request.session['scanfile'])
-		res['cveout'] = cveproc.read()
-		cveproc.close()
+		try:
+			res['cveout'] = subprocess.check_output([
+				'python3',
+				'/opt/nmapdashboard/nmapreport/nmap/cve.py',
+				request.session['scanfile']
+			], stderr=subprocess.STDOUT, text=True)
+		except subprocess.CalledProcessError as e:
+			res['cveout'] = e.output
 
 		return HttpResponse(json.dumps(res), content_type="application/json")
 
-		#hostmd5 = hashlib.md5(str(request.POST['host']).encode('utf-8')).hexdigest()
-		#portmd5 = hashlib.md5(str(request.POST['port']).encode('utf-8')).hexdigest()
-
-		# request.POST['host']
-
-		cpe = json.loads(base64.b64decode(urllib.parse.unquote(request.POST['cpe'])).decode('ascii'))
-
-		for cpestr in cpe:
-			r = requests.get('http://cve.circl.lu/api/cvefor/'+cpestr)
-			cvejson = r.json()
-
-			for host in cpe[cpestr]:
-				hostmd5 = hashlib.md5(str(host).encode('utf-8')).hexdigest()
-				if type(cvejson) is list and len(cvejson) > 0:
-					res[host] = cvejson[0]
-					f = open('/opt/notes/'+scanfilemd5+'_'+hostmd5+'.cve', 'w')
-					f.write(json.dumps(cvejson))
-					f.close()
-
-		return HttpResponse(json.dumps(res), content_type="application/json")
-
-		r = requests.get('http://cve.circl.lu/api/cvefor/'+request.POST['cpe'])
-
-		if request.POST['host'] not in res:
-			res[request.POST['host']] = {}
-
-		cvejson = r.json()
-
-		if type(cvejson) is list and len(cvejson) > 0:
-			res[request.POST['host']][request.POST['port']] = cvejson[0]
-			f = open('/opt/notes/'+scanfilemd5+'_'+hostmd5+'.cve', 'w')
-			f.write(json.dumps(cvejson))
-			f.close()
-
-		return HttpResponse(json.dumps(res), content_type="application/json")
+	return HttpResponse(json.dumps(res), content_type="application/json")
 
 def apiv1_hostdetails(request, scanfile, faddress=""):
 	if token_check(request.GET['token']) is not True:
@@ -344,9 +325,17 @@ def apiv1_scan(request):
 	if token_check(request.GET['token']) is not True:
 		return HttpResponse(json.dumps({'error':'invalid token'}, indent=4), content_type="application/json")
 
-	gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
+	try:
+		git_branch = subprocess.check_output(
+			['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+			cwd='/opt/nmapdashboard/nmapreport',
+			stderr=subprocess.DEVNULL,
+			text=True
+		).strip()
+	except Exception:
+		git_branch = 'Unknown'
 
-	r['webmap_version'] = gitcmd.read().strip()
+	r['webmap_version'] = git_branch
 
 	xmlfiles = os.listdir('/opt/xml')
 

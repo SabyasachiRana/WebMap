@@ -79,8 +79,15 @@ def cron():
 					time.sleep(5)
 					nmap_out_file = genFinishedScanFileName(sched)
 					shutil.move(nmap_active_scan_out, '/opt/xml/' + nmap_out_file)
-					nmapout = os.popen('python3 ' + cdir + '/cve.py webmapsched_' + str(sched['lastrun']) + '_' + sched['params']['filename'] + '').readlines()
-					print(nmapout)
+					try:
+						nmapout = subprocess.check_output(
+							['python3', cdir + '/cve.py', 'webmapsched_' + str(sched['lastrun']) + '_' + sched['params']['filename']],
+							stderr=subprocess.STDOUT,
+							text=True
+						)
+						print(nmapout)
+					except subprocess.CalledProcessError as e:
+						print(e.output)
 				time.sleep(10)
 			else:
 				print("[SKIP]  scan:" + sched['params']['filename'] + " id:" + str(sched['number']) + " (nextrun:" + str(nextrun) + " / now:" + str(time.time()) + ")")

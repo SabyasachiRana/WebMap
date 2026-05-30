@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import xmltodict, json, html, os, hashlib, re, urllib.parse, base64
+import xmltodict, json, html, os, hashlib, re, urllib.parse, base64, subprocess
 from collections import OrderedDict
 from nmapreport.functions import *
 
@@ -373,7 +373,12 @@ def index(request, filterservice="", filterportid=""):
 
 	# gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
 	try:
-		git_branch = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD 2>/dev/null').read().strip()
+		git_branch = subprocess.check_output(
+			['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+			cwd='/opt/nmapdashboard/nmapreport',
+			stderr=subprocess.DEVNULL,
+			text=True
+		).strip()
 		if not git_branch:
 			git_branch = "Unknown"
 	except Exception:
