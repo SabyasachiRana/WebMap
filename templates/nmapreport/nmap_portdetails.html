@@ -39,6 +39,25 @@
 										<i class="fas fa-door-open green-text"></i>
 									{% endif %}
 									<span class="title-small grey-text">{{ v.protocol }} / </span><b class="blue-text text-darken-3">{{ v.portid }}</b><br>
+{% if v.state == "open" %}
+    {% if v.portid == "80" or v.portid == "8080" or v.portid == "3000" or v.portid == "8000" %}
+        <a href="http://{{ address }}:{{ v.portid }}" target="_blank" class="small green-text">
+            <i class="fas fa-external-link-alt"></i> http://{{ address }}:{{ v.portid }}
+        </a>
+    {% elif v.portid == "443" or v.portid == "8443" %}
+        <a href="https://{{ address }}:{{ v.portid }}" target="_blank" class="small green-text">
+            <i class="fas fa-external-link-alt"></i> https://{{ address }}:{{ v.portid }}
+        </a>
+    {% elif v.service == "http" %}
+        <a href="http://{{ address }}:{{ v.portid }}" target="_blank" class="small green-text">
+            <i class="fas fa-external-link-alt"></i> http://{{ address }}:{{ v.portid }}
+        </a>
+    {% elif v.service == "https" %}
+        <a href="https://{{ address }}:{{ v.portid }}" target="_blank" class="small green-text">
+            <i class="fas fa-external-link-alt"></i> https://{{ address }}:{{ v.portid }}
+        </a>
+    {% endif %}
+{% endif %}
 									<div class="small" style="margin-top:10px;">
 										<b class="grey-text">Service:</b> {{ v.service }}<br>
 										<b class="grey-text">State:</b> {{ v.state }}<br>
