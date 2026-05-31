@@ -32,7 +32,7 @@ $ docker run -d \
          -v ./_container/xml:/opt/xml \
          -v ./_container/notes:/opt/notes \
          -v ./_container/schedule:/opt/schedule \
-         reborntc/webmap
+         ghcr.io/sabyasachirana/webmap
 
 $ # now you can run Nmap and save the XML Report on /tmp/webmap
 $ docker exec -ti webmap nmap -sT -A -T4 -oX /opt/xml/myscan.xml 192.168.1.0/24
