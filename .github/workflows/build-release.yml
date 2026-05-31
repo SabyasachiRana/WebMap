@@ -47,7 +47,7 @@ jobs:
             echo "TAGS=${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
           elif [[ "${GITHUB_REF}" =~ ^refs/tags/(v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
             VERSION="${BASH_REMATCH[1]}"
-            echo "TAGS=${IMAGE_REF}:${VERSION},${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
+            printf "TAGS=%s\n%s\n" "${IMAGE_REF}:${VERSION}" "${IMAGE_REF}:latest" >> "$GITHUB_OUTPUT"
           else
             SHORT_SHA="${GITHUB_SHA:0:8}"
             echo "TAGS=${IMAGE_REF}:${SHORT_SHA}" >> "$GITHUB_OUTPUT"
